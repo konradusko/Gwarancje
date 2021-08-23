@@ -1,0 +1,315 @@
+.WarrantyList {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    &__top {}
+
+    &__header {
+        background: $color4;
+        color: $cfont1;
+        height: 135px;
+        user-select: none;
+        flex: 0 1 auto;
+    }
+
+    &__logo {
+        padding: 10px 0;
+        margin: 0;
+        font-size: 0.9em;
+        font-weight: normal;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: -25px;
+    }
+
+    &__TopMenu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px 20px;
+    }
+
+    &__profil {
+        height: 55px;
+        width: 55px;
+        color: red;
+        border: 1.5px solid white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+
+    &__avatar {
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        display: block;
+        text-indent: -10000px;
+    }
+
+    &__NoAvatar {
+        @include BeforeIcon("\e815", 1.5em, $cfont1, 0);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
+    }
+
+    &__add {
+        font-size: 2em;
+        font-weight: bold;
+
+        &>a:hover {
+            opacity: 0.8;
+        }
+    }
+
+
+    &__StatusBox {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: $color5;
+        box-shadow: 0px 0px 8px black;
+        width: 80%;
+        margin: -30px auto 10px auto;
+        border-radius: 10px;
+        height: 60px;
+        user-select: none;
+    }
+
+    &__StatusInfo {}
+
+    &__StatusBoxNumber {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    &__StatusBoxName {
+        font-size: 0.7em;
+        color: $cfont6;
+    }
+
+    &__FiltrBox {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+
+    &__FiltrBoxLabel {
+        width: 70%;
+        @include BeforeIcon("\e808", 0.8em, inherit, 2px);
+    }
+
+    &__FiltrBoxInput {
+        border: none;
+        background: none;
+        outline: none;
+        width: 90%;
+        font-size: 0.8em;
+        border-bottom: 1px solid $color5;
+        user-select: none;
+        color: $cfont6;
+
+        &::placeholder {
+            color: $cfont6;
+        }
+
+        &:focus {
+            border-bottom: 1px solid $color6;
+        }
+    }
+
+    &__FiltrBoxFilters {
+        font-size: 0.8em;
+        user-select: none;
+        color: $cfont6;
+        @include AfterIcon("\f161", 0.8em, inherit, 2px);
+
+        &:hover .WarrantyList__FiltrBoxType {
+            display: block;
+        }
+    }
+
+    &__FiltrBoxType {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        border-right: 1px solid $color4;
+        margin-right: 1vw;
+
+        &>div {
+            background: $color5;
+
+            text-align: right;
+            display: block;
+            padding: 5px 5px 0px 0px
+        }
+    }
+
+    &__FiltrBoxIcon--UP {
+        @include AfterIcon("\e870", 1.2em, inherit, 2px);
+    }
+
+    &__FiltrBoxIcon--DOWN {
+        @include AfterIcon("\e86f", 1.2em, inherit, 2px);
+    }
+
+
+
+    &__ItemsList {
+        //! scroll bar
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $color4;
+            border-radius: 10px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 15px 4vw;
+
+        &:nth-of-type(2n+1) {
+            scroll-snap-align: start;
+        }
+    }
+
+    &__ItemFirstPart {
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        border: 2.5px solid $color4;
+        position: relative;
+        padding: 0 -15px;
+    }
+
+    &__ItemImg {
+        display: block;
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        z-index: 999;
+        text-indent: -10000px;
+    }
+
+    &__ItemDot {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 2px;
+        right: 0;
+    }
+
+    &__ItemNoImg {
+        @include BeforeIcon("\e81a", 1.5em, $cfont6, 0);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    &__ItemSecondPart {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        flex-grow: 1;
+        padding: 0 0 0 5vw;
+    }
+
+    &__ItemName {
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+    }
+
+    &__ItemDescription {
+        margin: 0;
+        padding: 0;
+        font-size: 0.7em;
+    }
+
+    &__ItemThirdPart {
+        font-size: 0.8em;
+        font-weight: bold;
+        color: $cfont5;
+    }
+
+}
+
+
+//? Typy kropek - długość gwarancji
+//Nowo dodany:
+.WarrantyList__item[data-StatusItem="new"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
+    background: $color4;
+}
+
+//Zakończone
+.WarrantyList__item[data-StatusItem="archive"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
+    background: $color1;
+}
+
+//Dużo dni gwarancji
+.WarrantyList__item[data-StatusItem="young"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
+    background: $color2;
+}
+
+//Około polowa dni gwarancji
+.WarrantyList__item[data-StatusItem="medium"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
+    background: $color9;
+}
+
+//Gwarancja ubiega ku końcowi 
+.WarrantyList__item[data-StatusItem="old"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
+    background: $color8;
+}
+
+//? Typy okręgów 
+//Prywatna gwarancja
+.WarrantyList__item[data-TypeItem="warranty"] .WarrantyList__ItemFirstPart {
+    border: 2.5px solid $color4;
+}
+
+//Gwarancja firmy
+.WarrantyList__item[data-TypeItem="business"] .WarrantyList__ItemFirstPart {
+    border: 2.5px solid $color9;
+}
+
+//Gwarancja rodziny
+.WarrantyList__item[data-TypeItem="family"] .WarrantyList__ItemFirstPart {
+    border: 2.5px solid $color2;
+}
+
+//Gwarancja moja + udostępniona dla rodziny 
+.WarrantyList__item[data-TypeItem="MeFamily"] .WarrantyList__ItemFirstPart {
+    border: double 2.5px transparent;
+    background-image: linear-gradient($color5, $color5),
+        linear-gradient(to right, $color4, $color2);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}

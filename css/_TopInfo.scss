@@ -1,0 +1,101 @@
+.TopInfo {
+    &__error {
+        background: $color9;
+        font-weight: bold;
+        text-align: center;
+        color: $cfont3;
+
+
+        &>noscript {
+            padding: 5px;
+        }
+
+
+        &--css {
+            padding: 5px;
+        }
+    }
+
+    &__info {
+        padding: 0 5px 0 5px;
+
+        //? Typy InfoBoxów
+        //Wyłączony
+        &[data-typinfo="off"] {
+            display: none;
+        }
+
+        //Alert
+        &[data-typinfo="alert"] {
+            background-color: $color8;
+            color: $cfont1;
+            @include BeforeIcon("\e852", inhrit, $cfont1, 3px);
+        }
+
+        //Info
+        &[data-typinfo="info"] {
+            background-color: $color3;
+            color: $cfont1;
+            @include BeforeIcon("\e8b6", inhrit, $cfont1, 3px);
+        }
+
+        //Promo 
+        &[data-typinfo="promo"] {
+            background-color: $color2;
+            color: $cfont1;
+            @include BeforeIcon("\e8b0", inhrit, $cfont1, 3px);
+        }
+
+        //? Dodawanie timera do boxu
+        &[data-timeinfo="yes"] {
+            animation: HiddenBox 12s 1;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+
+
+            &::after {
+                animation: HiddenBoxLine 12s 1;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+                content: " ";
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: $color1;
+                margin: 0 auto;
+            }
+        }
+
+    }
+}
+
+
+
+@keyframes HiddenBox {
+    0% {
+        height: auto;
+        opacity: 1;
+    }
+
+
+    98% {
+        height: auto;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes HiddenBoxLine {
+    0% {
+        width: 100%;
+    }
+
+
+    100% {
+        width: 0%;
+    }
+}

@@ -1,0 +1,76 @@
+.nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 9999;
+    background: $color5;
+    border: 2px solid $color4;
+    border-radius: 15px;
+    padding: 5px;
+
+
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        1% {
+            margin-bottom: -100%;
+        }
+
+        100% {
+            margin-bottom: 0%;
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            margin-bottom: 0%;
+        }
+
+        1% {
+            margin-bottom: 0%;
+        }
+
+
+        100% {
+            margin-bottom: -100%;
+            position: fixed; //Fix nie rozciąga body
+        }
+    }
+
+    &--hidden {
+        animation: fadeOut 1s 1;
+        animation-fill-mode: forwards;
+        //display: none;
+    }
+
+    &--show {
+        animation: fadeIn 1s 1;
+        animation-fill-mode: forwards;
+        //display: block;
+    }
+
+
+
+
+    &__link {
+        padding: 10px;
+
+        &--home {
+            color: $cfont7;
+            @include AfterIcon("\e85e", 1.5em, $cfont7, 2px);
+        }
+
+        &--shop {
+            @include AfterIcon("\f290", 1.5em, $cfont6, 2px);
+        }
+
+        &--user {
+            @include AfterIcon("\e815", 1.5em, $cfont6, 2px);
+        }
+
+    }
+}

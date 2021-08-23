@@ -1,0 +1,75 @@
+//*     Importy:
+//?Fonty:
+@font-face {
+    font-family: Nunito;
+    src: url(../font/Nunito-Regular.ttf);
+}
+
+@font-face {
+    font-family: fontello;
+    src: url(../font/fontello.ttf);
+}
+
+//? Moduły:
+@import 'color';
+
+
+//? Mixin
+@mixin BeforeIcon($icon, $fontSize, $color, $margin-right) {
+    &::before {
+        font-family: Fontello;
+        content: "#{$icon}";
+        font-size: $fontSize;
+        color: $color;
+        margin-right: $margin-right;
+    }
+}
+
+@mixin AfterIcon($icon, $fontSize, $color, $margin-left) {
+    &::after {
+        font-family: Fontello;
+        content: "#{$icon}";
+        font-size: $fontSize;
+        color: $color;
+        margin-left: $margin-left;
+
+    }
+}
+
+//? STYLE:
+
+html {
+    overscroll-behavior-y: auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Nunito;
+}
+
+a {
+    color: $cfont1;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+//Usuwani wiadomości na górze strony o złym wczytaniu CSS
+.TopInfo__error--css {
+    display: none;
+}
+
+
+
+
+
+//? Strony:\
+@import 'Nav';
+@import 'TopInfo';
+@import 'WarrantyList';
