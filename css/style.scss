@@ -32,14 +32,12 @@
         font-size: $fontSize;
         color: $color;
         margin-left: $margin-left;
-
     }
 }
 
 //? STYLE:
 
 html {
-    overscroll-behavior-y: auto;
     height: 100%;
     box-sizing: border-box;
 }
@@ -59,6 +57,13 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
+.GW {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
 //Usuwani wiadomości na górze strony o złym wczytaniu CSS
 .TopInfo__error--css {
@@ -73,3 +78,4 @@ a {
 @import 'Nav';
 @import 'TopInfo';
 @import 'WarrantyList';
+@import 'Profil';

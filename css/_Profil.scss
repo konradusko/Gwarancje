@@ -1,0 +1,210 @@
+.User {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: $color5;
+    z-index: 1;
+    user-select: none;
+
+
+
+    &--hide {
+        display: none;
+    }
+
+    &__header {
+        background: $color4;
+        color: $cfont1;
+        height: 135px;
+        position: relative;
+    }
+
+    &__title {
+        padding: 10px 0;
+        margin: 0;
+        font-size: 0.9em;
+        font-weight: normal;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: -25px;
+        text-transform: uppercase;
+    }
+
+    &__TopMenu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0px 15px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    &__TopFirst {
+        margin-bottom: -30px;
+        font-size: 1.1em;
+        @include BeforeIcon("\e8b0", inherit, $cfont1, 5px);
+    }
+
+    &__TopAvatar {
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        margin-bottom: -60px;
+        box-shadow: 0px -2px 5px $color4, 0px 30px 5px white, inset 0 1px 1px $color4, ;
+        border: 2px solid $color4;
+        position: relative;
+        background-color: $color5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    &__TopAvatarImg {
+        border-radius: 50%;
+        background-color: $color5;
+        text-indent: -10000px;
+        z-index: 2;
+    }
+
+    &__TopAvatarNoImg {
+        @include BeforeIcon("\e815", 3em, $cfont6, 0);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__TopSecond {
+        margin-bottom: -30px;
+        font-size: 1.1em;
+        @include BeforeIcon("\f291", 0.7em, $cfont1, 5px);
+    }
+
+    &__BottomMenu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 17px 3px 17px;
+        font-size: 0.9em;
+        border-bottom: 1px solid $color6;
+
+    }
+
+    &__BottomFirst {
+        text-align: center;
+        color: $cfont6;
+    }
+
+    &__BottomSecond {
+        text-align: center;
+        color: $cfont6;
+    }
+
+
+    //? Lista ustawień
+    &__SettingList {
+        box-sizing: border-box;
+        padding: 0 20px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $color4;
+            border-radius: 10px;
+        }
+    }
+
+    &__section {}
+
+    &__ScTitile {
+        font-size: 1.5em;
+        padding: 35px 0 10px 0;
+        margin: 0;
+        color: $cfont6;
+        position: sticky;
+        top: 0;
+        background: $color5;
+
+        &--first {
+            padding: 30px 0 10px 0;
+        }
+    }
+
+    &__ScLink {
+        color: $cfont6;
+        padding: 0 10px 20px 10px;
+        display: flex;
+        align-items: center;
+        font-size: 1.2em;
+
+        &::after {
+            font-family: Fontello;
+            content: "\f105";
+            margin-left: auto;
+        }
+
+        //Profil
+        &--Uemail {
+            @include BeforeIcon("\f1fa", inherit, $cfont6, 3px);
+        }
+
+        &--Upassword {
+            @include BeforeIcon("\e8b7", inherit, $cfont6, 3px);
+        }
+
+        &--Uname {
+            @include BeforeIcon("\e815", inherit, $cfont6, 3px);
+        }
+
+        &--Ulogout {
+            @include BeforeIcon("\e8a6", inherit, $cfont6, 3px);
+
+            &::after {
+                display: none;
+            }
+        }
+
+        //Sloty
+        &--Sbuy {
+            @include BeforeIcon("\f290", inherit, $cfont6, 3px);
+        }
+
+        &--SbuyAllegro {
+            @include BeforeIcon("\f291", inherit, $cfont6, 3px);
+        }
+
+        &--Senter {
+            @include BeforeIcon("\e84c", inherit, $cfont6, 3px);
+        }
+
+        //O aplikacji
+        &--Aupdate {
+            @include BeforeIcon("\e894", inherit, $cfont6, 3px);
+        }
+
+        &--Ahelp {
+            @include BeforeIcon("\f0eb", inherit, $cfont6, 3px);
+        }
+
+        &--Arules {
+            @include BeforeIcon("\f132", inherit, $cfont6, 3px);
+        }
+
+        &--Aprivacy {
+            @include BeforeIcon("\e82e", inherit, $cfont6, 3px);
+        }
+
+
+    }
+}

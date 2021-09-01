@@ -10,7 +10,6 @@
 }
 
 html {
-  overscroll-behavior-y: auto;
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -30,6 +29,14 @@ a {
   color: #ffffff;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+.GW {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .TopInfo__error--css {
@@ -283,8 +290,8 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -635,12 +642,82 @@ a {
   color: #9C27B0;
 }
 
-.WarrantyList__item[data-StatusItem="new"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
-  background: #9C27B0;
+.WarrantyList__ItemFirstPart--loading {
+  height: 70px;
+  width: 70px;
+  padding: 0 -15px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), color-stop(80%, rgba(255, 255, 255, 0))), #DFDFDF;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%), #DFDFDF;
+  background-repeat: repeat-y;
+  background-size: 20px 500px;
+  background-position: 0 0;
+  -webkit-animation: blysk 1.5s infinite;
+          animation: blysk 1.5s infinite;
+  color: transparent;
 }
 
-.WarrantyList__item[data-StatusItem="archive"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
-  background: #424242;
+.WarrantyList__ItemName--loading {
+  margin-right: 30vw;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-size: 1em;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), color-stop(80%, rgba(255, 255, 255, 0))), #DFDFDF;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%), #DFDFDF;
+  background-repeat: repeat-y;
+  background-size: 20px 500px;
+  background-position: 0 0;
+  -webkit-animation: blysk 1.5s infinite;
+          animation: blysk 1.5s infinite;
+  color: transparent;
+}
+
+.WarrantyList__ItemDescription--loading {
+  margin: 0;
+  padding: 0;
+  font-size: 0.7em;
+  border-radius: 5px;
+  margin-right: 25vw;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), color-stop(80%, rgba(255, 255, 255, 0))), #DFDFDF;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%), #DFDFDF;
+  background-repeat: repeat-y;
+  background-size: 20px 500px;
+  background-position: 0 0;
+  -webkit-animation: blysk 1.5s infinite;
+          animation: blysk 1.5s infinite;
+  color: transparent;
+}
+
+.WarrantyList__ItemThirdPart--loading {
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), color-stop(80%, rgba(255, 255, 255, 0))), #DFDFDF;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%), #DFDFDF;
+  background-repeat: repeat-y;
+  background-size: 8px 500px;
+  background-position: 0 0;
+  -webkit-animation: blysk 1.5s infinite;
+          animation: blysk 1.5s infinite;
+  color: transparent;
+}
+
+@-webkit-keyframes blysk {
+  to {
+    background-position: 120% 0, 0 0;
+  }
+}
+
+@keyframes blysk {
+  to {
+    background-position: 120% 0, 0 0;
+  }
+}
+
+.WarrantyList__item[data-StatusItem="new"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
+  background: #9C27B0;
 }
 
 .WarrantyList__item[data-StatusItem="young"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
@@ -653,6 +730,14 @@ a {
 
 .WarrantyList__item[data-StatusItem="old"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
   background: #F81C00;
+}
+
+.WarrantyList__item[data-StatusItem="archive"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
+  background: #424242;
+}
+
+.WarrantyList__item[data-StatusItem="warranty"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
+  background: #2196F3;
 }
 
 .WarrantyList__item[data-TypeItem="warranty"] .WarrantyList__ItemFirstPart {
@@ -673,5 +758,304 @@ a {
   background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(to right, #9C27B0, #419D45);
   background-origin: border-box;
   background-clip: content-box, border-box;
+}
+
+.User {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #FFFFFF;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.User--hide {
+  display: none;
+}
+
+.User__header {
+  background: #9C27B0;
+  color: #ffffff;
+  height: 135px;
+  position: relative;
+}
+
+.User__title {
+  padding: 10px 0;
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: -25px;
+  text-transform: uppercase;
+}
+
+.User__TopMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.User__TopFirst {
+  margin-bottom: -30px;
+  font-size: 1.1em;
+}
+
+.User__TopFirst::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+.User__TopAvatar {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  margin-bottom: -60px;
+  -webkit-box-shadow: 0px -2px 5px #9C27B0, 0px 30px 5px white, inset 0 1px 1px #9C27B0;
+          box-shadow: 0px -2px 5px #9C27B0, 0px 30px 5px white, inset 0 1px 1px #9C27B0;
+  border: 2px solid #9C27B0;
+  position: relative;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.User__TopAvatarImg {
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  text-indent: -10000px;
+  z-index: 2;
+}
+
+.User__TopAvatarNoImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.User__TopAvatarNoImg::before {
+  font-family: Fontello;
+  content: "";
+  font-size: 3em;
+  color: #444444;
+  margin-right: 0;
+}
+
+.User__TopSecond {
+  margin-bottom: -30px;
+  font-size: 1.1em;
+}
+
+.User__TopSecond::before {
+  font-family: Fontello;
+  content: "";
+  font-size: 0.7em;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+.User__BottomMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 17px 3px 17px;
+  font-size: 0.9em;
+  border-bottom: 1px solid #9E9E9E;
+}
+
+.User__BottomFirst {
+  text-align: center;
+  color: #444444;
+}
+
+.User__BottomSecond {
+  text-align: center;
+  color: #444444;
+}
+
+.User__SettingList {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 20px;
+  overflow-y: scroll;
+}
+
+.User__SettingList::-webkit-scrollbar {
+  width: 3px;
+}
+
+.User__SettingList::-webkit-scrollbar-thumb {
+  background-color: #9C27B0;
+  border-radius: 10px;
+}
+
+.User__ScTitile {
+  font-size: 1.5em;
+  padding: 35px 0 10px 0;
+  margin: 0;
+  color: #444444;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #FFFFFF;
+}
+
+.User__ScTitile--first {
+  padding: 30px 0 10px 0;
+}
+
+.User__ScLink {
+  color: #444444;
+  padding: 0 10px 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2em;
+}
+
+.User__ScLink::after {
+  font-family: Fontello;
+  content: "\f105";
+  margin-left: auto;
+}
+
+.User__ScLink--Uemail::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
+}
+
+.User__ScLink--Upassword::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
+}
+
+.User__ScLink--Uname::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
+}
+
+.User__ScLink--Ulogout::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
+}
+
+.User__ScLink--Ulogout::after {
+  display: none;
+}
+
+.User__ScLink--Sbuy::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
+}
+
+.User__ScLink--SbuyAllegro::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
+}
+
+.User__ScLink--Senter::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
+}
+
+.User__ScLink--Aupdate::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
+}
+
+.User__ScLink--Ahelp::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
+}
+
+.User__ScLink--Arules::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
+}
+
+.User__ScLink--Aprivacy::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #444444;
+  margin-right: 3px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,10 +2,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    bottom: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
+
 
 
     &__top {}
@@ -65,7 +66,6 @@
         margin-right: -50%;
         transform: translate(-50%, -50%);
         z-index: -1;
-
     }
 
     &__add {
@@ -260,6 +260,62 @@
         color: $cfont5;
     }
 
+    //? Skeleton Loader
+    //Mixin
+    @mixin ItemLoading($bradius, $bsize) {
+        border-radius: $bradius;
+        background: linear-gradient(to right,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0.5) 50%,
+                rgba(255, 255, 255, 0) 80%),
+            #DFDFDF;
+        background-repeat: repeat-y;
+        background-size: $bsize 500px;
+        background-position: 0 0;
+        animation: blysk 1.5s infinite;
+        color: transparent;
+    }
+
+    &__ItemFirstPart--loading {
+        height: 70px;
+        width: 70px;
+        padding: 0 -15px;
+        @include ItemLoading(50%, 20px)
+    }
+
+    &__ItemName--loading {
+        margin-right: 30vw;
+        margin-top: 0px;
+        margin-bottom: 8px;
+        font-size: 1em;
+        @include ItemLoading(5px, 20px);
+    }
+
+    &__ItemDescription--loading {
+        margin: 0;
+        padding: 0;
+        font-size: 0.7em;
+        border-radius: 5px;
+        margin-right: 25vw;
+        @include ItemLoading(5px, 20px);
+    }
+
+    &__ItemThirdPart--loading {
+        font-size: 0.8em;
+        font-weight: bold;
+        @include ItemLoading(5px, 8px);
+    }
+
+
+
+    //Animacja 
+    @keyframes blysk {
+        to {
+            background-position: 120% 0, 0 0;
+        }
+    }
+
+
 }
 
 
@@ -267,11 +323,6 @@
 //Nowo dodany:
 .WarrantyList__item[data-StatusItem="new"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
     background: $color4;
-}
-
-//Zakończone
-.WarrantyList__item[data-StatusItem="archive"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
-    background: $color1;
 }
 
 //Dużo dni gwarancji
@@ -287,6 +338,16 @@
 //Gwarancja ubiega ku końcowi 
 .WarrantyList__item[data-StatusItem="old"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
     background: $color8;
+}
+
+//Zakończone
+.WarrantyList__item[data-StatusItem="archive"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
+    background: $color1;
+}
+
+//Produkt na gwarancji
+.WarrantyList__item[data-StatusItem="warranty"] .WarrantyList__ItemFirstPart .WarrantyList__ItemDot {
+    background: $color3;
 }
 
 //? Typy okręgów 
