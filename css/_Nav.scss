@@ -1,4 +1,5 @@
 .nav {
+    box-sizing: border-box;
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -60,8 +61,7 @@
         padding: 10px;
 
         &--home {
-            color: $cfont7;
-            @include AfterIcon("\e85e", 1.5em, $cfont7, 2px);
+            @include AfterIcon("\e85e", 1.5em, $cfont6, 2px);
         }
 
         &--shop {
@@ -70,6 +70,12 @@
 
         &--user {
             @include AfterIcon("\e815", 1.5em, $cfont6, 2px);
+        }
+
+        &--active {
+            &::after {
+                color: $cfont7;
+            }
         }
 
     }

@@ -27,15 +27,16 @@
         <!--TODO: Firebase -->
         <!-- JS -->
         <script src="js/_nav.js" defer></script>
+        <script src="js/_profil.js" defer></script>
         
     </head>
     <body>
         <main class="GW"> 
             <!--!  MODUŁ:  Menu      -->
             <nav class="GW__nav nav">
-                <a href="#home" class="nav__link nav__link--home"> </a>
-                <a href="#shop" class="nav__link nav__link--shop"> </a>
-                <a href="#user" class="nav__link nav__link--user"> </a>
+                <a class="nav__link nav__link--home nav__link--active" href="?page=home"> </a>
+                <a class="nav__link nav__link--shop" href="?page=shop"> </a>
+                <a class="nav__link nav__link--user" href="?page=user"> </a>
             </nav>
 
 
@@ -60,12 +61,10 @@
                             GWARANT
                         </h1>
                         <div class="WarrantyList__TopMenu">
-                            <div class="WarrantyList__profil">
-                                <a href="#profil">
-                                    <img class="WarrantyList__avatar" src="https://picsum.photos/80/80" alt="">
-                                </a>
+                            <a class="WarrantyList__profil" href="?page=user">
+                                <img class="WarrantyList__avatar" src="https://picsum.photos/80/80" alt="">
                                 <div class="WarrantyList__NoAvatar"></div>
-                            </div>
+                            </a>
                             <div class="WarrantyList__add">
                                 <a href="#add">
                                     +
@@ -251,16 +250,22 @@
         
 
             <!--!    WIDOK:  Profil      -->
-            <section class="GW__User User User--hidee">
+            <section class="GW__User User User--hide">
                 <header class="User__header">
                     <h2 class="User__title">Witaj Tomek</h2>
                     <div class="User__TopMenu">
-                        <div class="User__TopFirst">Wpisz kod</div>
-                        <div class="User__TopAvatar">
-                            <img class="User__TopAvatarImg"  src="https://picsum.photos/120/120" alt="">
-                            <div class="User__TopAvatarNoImg"></div>
+                        <div class="User__CenterBox">
+                            <div class="User__TopFirst">Wpisz kod</div>
                         </div>
-                        <div class="User__TopSecond">Kup Slot</div>
+                        <div class="User__CenterBox">
+                            <div class="User__TopAvatar">
+                                <img class="User__TopAvatarImg"  src="https://picsum.photos/120/120" alt="">
+                                <div class="User__TopAvatarNoImg"></div>
+                            </div>
+                        </div>
+                        <div class="User__CenterBox"> 
+                            <div class="User__TopSecond">Kup Slot</div>
+                        </div>
                     </div>
                 </header>
                 <div class="User__BottomMenu">
@@ -281,7 +286,7 @@
 
                     <div class="User__section">
                         <H3 class="User__ScTitile User__ScTitile--first">
-                            Konto:
+                            Konto
                         </H3>
                         <div class="User__ScLink User__ScLink--Uemail">
                             Zmień e-mail
@@ -299,7 +304,7 @@
 
                     <div class="User__section">
                         <H3 class="User__ScTitile">
-                            Sloty:
+                            Sloty
                         </H3>
                         <div class="User__ScLink User__ScLink--Sbuy">
                             Kup klucz
@@ -314,7 +319,7 @@
 
                     <div class="User__section">
                         <H3 class="User__ScTitile">
-                            O aplikacji:
+                            O aplikacji
                         </H3>
                         <div class="User__ScLink User__ScLink--Aupdate">
                             Aktualizacje
