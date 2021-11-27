@@ -1,12 +1,13 @@
 //? Ukrywanie i pokazywanie menu
 let ScrollList1 = document.querySelector(".WarrantyList__ItemsList"); 
 let ScrollList2 = document.querySelector(".User__SettingList");
+let ScrollList3 = document.querySelector(".Product__Description");
 let MainMenu = document.querySelector(".GW__nav");
 let DefaultPosition = 0;
 
 
 //? Dodawanie chowania menu gdy scrolujemy 
-[ScrollList1, ScrollList2].forEach(function(item) {
+[ScrollList1, ScrollList2, ScrollList3].forEach(function(item) {
    item.addEventListener("scroll", function(){ 
       let st = item.scrollTop; 
       if (st > DefaultPosition){
@@ -25,9 +26,32 @@ let DefaultPosition = 0;
 
 //? Menu i nawigacja
 const getURL = new URLSearchParams(window.location.search);
-const menuLink = getURL.get("page");
+const MLink = getURL.get("page");
+const MBox = getURL.get("box");
 
-switch(menuLink) {
+//!Linki
+switch(MLink) {
+   case "home":
+   break;
+
+   case "user":
+      document.querySelector(".GW__User").classList.remove("User--hide");
+      document.querySelector(".nav__link").classList.remove("nav__link--active");
+      document.querySelector(`.nav__link--user`).classList.add("nav__link--active");
+   break;
+
+   case "product":
+      document.querySelector(".GW__Product").classList.remove("Product--hide");
+   break;
+
+   // default:
+   //   console.log("default");
+ }
+
+
+
+ //!Boxy
+ switch(MBox) {
    case "home":
    break;
 

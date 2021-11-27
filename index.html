@@ -28,6 +28,7 @@
         <!-- JS -->
         <script src="js/_nav.js" defer></script>
         <script src="js/_profil.js" defer></script>
+        <script src="js/_product.js" defer></script>
         
     </head>
     <body>
@@ -66,7 +67,7 @@
                                 <div class="WarrantyList__NoAvatar"></div>
                             </a>
                             <div class="WarrantyList__add">
-                                <a href="#add">
+                                <a href="?page=product">
                                     +
                                 </a>
                             </div>
@@ -97,16 +98,11 @@
                         <label class="WarrantyList__FiltrBoxLabel">
                             <input class="WarrantyList__FiltrBoxInput" type="text" placeholder="Szukaj">
                         </label>
-                        <div class="WarrantyList__FiltrBoxFilters">
+                        <a href="javascript:location.search+='&box=user';" class="WarrantyList__FiltrBoxFilters">
                             Filtry
-                            <div class="WarrantyList__FiltrBoxType">
-                                <div>A-Z</div>
-                                <div>Z-A</div>
-                                <div>Data <span class="WarrantyList__FiltrBoxIcon--UP"></span></div>
-                                <div>Data <span class="WarrantyList__FiltrBoxIcon--DOWN"></span></div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
+
                 </div>
 
                 
@@ -284,55 +280,58 @@
                 </div>
                 <div class="User__SettingList">
 
-                    <div class="User__section">
-                        <H3 class="User__ScTitile User__ScTitile--first">
+                    <div class="User__box">
+                        <H3 class="User__BoxTitile User__BoxTitile--first">
                             Konto
                         </H3>
-                        <div class="User__ScLink User__ScLink--Uemail">
+                        <a href="#" class="User__BoxLink User__BoxLink--Uemail">
                             Zmień e-mail
-                        </div>
-                        <div class="User__ScLink User__ScLink--Upassword">
+                        </a>
+                        <a href="#" class="User__BoxLink User__BoxLink--Upassword">
                             Zmień hasło
-                        </div>
-                        <div class="User__ScLink User__ScLink--Uname">
+                        </a>
+                        <a href="#" class="User__BoxLink User__BoxLink--Uname">
                             Zmień nazwę
-                        </div>
-                        <div class="User__ScLink User__ScLink--Ulogout">
+                        </a>
+                        <a href="#" class="User__BoxLink User__BoxLink--Uavatra">
+                            Zmień avatar
+                        </a>
+                        <a href="#" class="User__BoxLink User__BoxLink--Ulogout">
                             Wyloguj
-                        </div>
+                        </a>
                     </div>
 
-                    <div class="User__section">
-                        <H3 class="User__ScTitile">
+                    <div class="User__box">
+                        <H3 class="User__BoxTitile">
                             Sloty
                         </H3>
-                        <div class="User__ScLink User__ScLink--Sbuy">
+                        <a href="#" class="User__BoxLink User__BoxLink--Sbuy">
                             Kup klucz
-                        </div>
-                        <div class="User__ScLink User__ScLink--SbuyAllegro">
+                        </a>
+                        <a href="#" class="User__BoxLink User__BoxLink--SbuyAllegro">
                             Kup klucz na allegro
-                        </div>
-                        <div class="User__ScLink User__ScLink--Senter">
+                        </a>
+                        <a href="#" class="User__BoxLink User__BoxLink--Senter">
                             Wprowadź klucz
-                        </div>
+                        </a>
                     </div>
 
-                    <div class="User__section">
-                        <H3 class="User__ScTitile">
+                    <div class="User__box">
+                        <H3 class="User__BoxTitile">
                             O aplikacji
                         </H3>
-                        <div class="User__ScLink User__ScLink--Aupdate">
+                        <a href="#" class="User__BoxLink User__BoxLink--Aupdate">
                             Aktualizacje
-                        </div>
-                        <div class="User__ScLink User__ScLink--Ahelp">
+                        </a>
+                        <a href="#" class="User__BoxLink User__BoxLink--Ahelp">
                             Pomoc
-                        </div>
-                        <div class="User__ScLink User__ScLink--Arules">
+                        </a>
+                        <a href="#" class="User__BoxLink User__BoxLink--Arules">
                             Regulamin
-                        </div>
-                        <div class="User__ScLink User__ScLink--Aprivacy">
+                        </a>
+                        <a href="#" class="User__BoxLink User__BoxLink--Aprivacy">
                             Polityka prywatności
-                        </div>
+                        </a>
                         
                     </div>
                     
@@ -342,7 +341,171 @@
 
 
             <!--!    WIDOK:  Produkt     -->
-            <section class="GW__Product Product">
+            <section class="GW__Product Product Product--hide">
+                <header class="Product__header">
+                    <h2 class="Product__title">Aparat</h2>
+                    <h3 class="Product__nameItem">Sony X3000</h3>
+                    <div class="Product__TopMenu">
+                        <div class="Product__CenterBox">
+                            <div class="Product__TopFirst">99 %</div>
+                        </div>
+                        <div class="Product__CenterBox">
+                            <div class="Product__TopImage">
+                                <img class="Product__TopImageImg"  src="https://picsum.photos/500/500" alt="">
+                                <div class="Product__TopImageNoImg"></div>
+                            </div>
+                        </div>
+                        <div class="Product__CenterBox"> 
+                            <div class="Product__TopSecond">729 dni</div>
+                        </div>
+                    </div>
+                </header>
+                <div class="Product__Description">
+                    <div class="Product__TimeLineTop">
+                        <div class="Product__LineTop"></div>
+                    </div>
+                    <div class="Product__TimeLine ">
+                        <div class="Product__Line"></div>
+
+                        <div class="Product__LineEvent Product__LineEvent--right">
+                            <div class="Product__LineDate">
+                                <span class="Product__LineDateContent">28.08.2020</span>
+                            </div>
+                            <div class="Product__LineDot">
+                                <div class="Product__LineDotContent"></div>
+                            </div>
+                            <div class="Product__LineTitle">
+                                <span class="Product__LineTitleContent">Rozpoczęcie gwarancji</span>
+                            </div>
+                        </div>
+
+                        <div class="Product__LineEvent Product__LineEvent--left">
+                            <div class="Product__LineDate">
+                                <span class="Product__LineDateContent">28.08.2020</span>
+                            </div>
+                            <div class="Product__LineDot">
+                                <div class="Product__LineDotContent"></div>
+                            </div>
+                            <div class="Product__LineTitle">
+                                <span class="Product__LineTitleContent">Rozpoczęcie gwarancji asdasd asd ad a</span>
+                            </div>
+                        </div>
+
+                        <div class="Product__LineEvent Product__LineEvent--left">
+                            <div class="Product__LineDate">
+                                <span class="Product__LineDateContent">28.08.2020</span>
+                            </div>
+                            <div class="Product__LineDot">
+                                <div class="Product__LineDotContent"></div>
+                            </div>
+                            <div class="Product__LineTitle">
+                                <span class="Product__LineTitleContent">Zakończenie gwarancji</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="Product__TimeLineBottom">
+                        <div class="Product__LineBottom"></div>
+                        <div class="Product__AddEvent"></div>
+                    </div>
+                    <div class="Product__box Product__box--ProductInfo">
+                        <div class="Product__BoxBar">
+                            <H3 class="Product__BoxTitile">
+                                Informacje
+                            </H3>
+                            <div class="Product__BoxEditButton ">
+                                Edytuj
+                            </div>
+                        </div>
+                        <div class="Product__BoxKat Product__BoxKat--StartDate">
+                            <H4 class="Product__BoxKatName">Data rozpoczęcia gwarancji</H4>
+                            <div class="Product__BoxKatValue">25.03.2021</div>
+                        </div>
+                        <div class="Product__BoxKat Product__BoxKat--EndDate">
+                            <H4 class="Product__BoxKatName">Data zakończenia gwarancji</H4>
+                            <div class="Product__BoxKatValue">25.03.2021</div>
+                        </div>
+                        <div class="Product__BoxKat Product__BoxKat--Price">
+                            <H4 class="Product__BoxKatName">Cena zakupu</H4>
+                            <div class="Product__BoxKatValue">2 500zł</div>
+                        </div>
+                        <div class="Product__BoxKat Product__BoxKat--ID">
+                            <H4 class="Product__BoxKatName">Identyfikator przedmiotu</H4>
+                            <div class="Product__BoxKatValue">IMEI: 494858180754032</div>
+                        </div>
+
+                        <div class="Product__BoxKat Product__BoxKat--Seller">
+                            <H4 class="Product__BoxKatName">Nazwa sprzedawcy</H4>
+                            <div class="Product__BoxKatValue">Fuszerka sp. z.o.o</div>
+                        </div>
+                        <div class="Product__BoxKat Product__BoxKat--SellerAdress">
+                            <H4 class="Product__BoxKatName">Adres sprzedawcy</H4>
+                            <div class="Product__BoxKatValue">
+                                <address>
+                                    <div>ul. Nosacza 67</div>
+                                    <div>20-100 Puławy</div>
+                                </address>
+                            </div>
+                        </div>
+                        <div class="Product__BoxKat Product__BoxKat--PhoneNumber">
+                            <H4 class="Product__BoxKatName">Numer telefonu</H4>
+                            <div class="Product__BoxKatValue">
+                                <a href="tel:+48-997-998-999" class="Product__BoxKatNumber">+48 997 998 999</a>
+                            </div>
+                        </div>
+                        <div class="Product__BoxKat Product__BoxKat--Note">
+                            <H4 class="Product__BoxKatName">Notatka</H4>
+                            <div class="Product__BoxKatValue">
+                                Tutaj opis 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Product__box">
+                        <H3 class="Product__BoxTitile">
+                            Pliki
+                        </H3>
+                        <div class="Product__BoxFiles">
+
+                            <div class="Product__FilePanel">
+                                <div class="Product__FilePanelImgBox">
+                                    <img src="https://picsum.photos/500/500" alt="Produkt" class="Product__FilePanelImg">
+                                    <div class="Product__FilePanelNoImg"></div>
+                                    <div class="Product__FilePanelTitle">Produkt</div>
+                                </div>
+                                <div class="Product__FilePanelMenu">
+                                    <div class="Product__FileMenuWatch"></div>
+                                    <div class="Product__FileMenuEdit"></div>
+                                    <div class="Product__FileMenuShare"></div>
+                                </div>
+                            </div>
+                            <div class="Product__FilePanel">
+                                <div class="Product__FilePanelImgBox">
+                                    <img src="https://picsum.photos/501/501" alt="Produkt" class="Product__FilePanelImg">
+                                    <div class="Product__FilePanelNoImg"></div>
+                                    <div class="Product__FilePanelTitle">Gwarancja - plik 1</div>
+                                </div>
+                                <div class="Product__FilePanelMenu">
+                                    <div class="Product__FileMenuWatch"></div>
+                                    <div class="Product__FileMenuEdit"></div>
+                                    <div class="Product__FileMenuShare"></div>
+                                </div>
+                            </div>
+                            <div class="Product__FilePanel">
+                                <div class="Product__FilePanelImgBox">
+                                    <img src="https://picsum.photos/501/500" alt="Produkt" class="Product__FilePanelImg">
+                                    <div class="Product__FilePanelNoImg"></div>
+                                    <div class="Product__FilePanelTitle">Gwarancja - plik 2</div>
+                                </div>
+                                <div class="Product__FilePanelMenu">
+                                    <div class="Product__FileMenuWatch"></div>
+                                    <div class="Product__FileMenuEdit"></div>
+                                    <div class="Product__FileMenuShare"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </body>

@@ -1,0 +1,447 @@
+.Product {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: $color5;
+    z-index: 1;
+    user-select: none;
+    z-index: 999;
+
+    &--hide {
+        display: none;
+    }
+
+    &__header {
+        background: $color4;
+        color: $cfont1;
+        height: 135px;
+        position: relative;
+    }
+
+
+    &__title {
+        padding: 10px 0;
+        margin: 0;
+        font-size: 0.9em;
+        font-weight: normal;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: -25px;
+        text-transform: uppercase;
+    }
+
+    &__nameItem {
+        padding: 20px 0;
+        margin: 0;
+        font-size: 0.8em;
+        font-weight: normal;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__TopMenu {
+        display: flex;
+        align-items: end;
+        box-sizing: border-box;
+        padding: 0 10px;
+        //position: absolute;
+        //bottom: 0;
+        width: 100%;
+    }
+
+    &__CenterBox {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__TopFirst {
+        font-size: 0.8em;
+        margin-left: auto;
+        margin-right: 2vw;
+        font-weight: bold;
+        margin-top: -25px;
+    }
+
+    &__TopSecond {
+        font-size: 0.8em;
+        margin-left: 2vw;
+        margin-right: auto;
+        font-weight: bold;
+        margin-top: -25px;
+    }
+
+    &__TopImage {
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        margin-bottom: -60px;
+        padding: 3px;
+        //!  GRADIENT
+        background: linear-gradient(360deg, $color4 0%, $color4 50%, $color5 0%, $color5 100%);
+        box-shadow: 0px 0px 9px black;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    &__TopImageImg {
+        border-radius: 50%;
+        background-color: $color5;
+        text-indent: -10000px;
+        z-index: 2;
+        background: $color5;
+        height: auto;
+        width: auto;
+        max-width: 120px;
+        max-height: 120px;
+        box-sizing: border-box;
+    }
+
+    &__TopImageNoImg {
+        @include BeforeIcon("\e819", 3em, $cfont1, 0);
+        text-shadow: 0px 0px 10px black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__Description {
+        box-sizing: border-box;
+        padding: 0 20px;
+        overflow-y: scroll;
+    }
+
+
+    &__TimeLineTop {
+        height: 100px;
+        position: relative;
+    }
+
+    &__LineTop {
+        background: $color4;
+        height: 100%;
+        width: 4px;
+        border-radius: 5px;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+
+    &__TimeLine {
+        height: 350px;
+        position: relative;
+    }
+
+    &__Line {
+        background: $color4;
+        height: 100%;
+        width: 4px;
+        border-radius: 5px;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+
+
+    &__LineEvent {
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8vw;
+        height: 26px;
+        margin-top: -13px;
+
+        &:last-child {
+            top: 100%;
+        }
+
+        //! MODERNIZACJA NA JS!!!!!!
+        &:nth-of-type(2) {
+            top: 50%;
+        }
+    }
+
+    &__LineEvent--right>&__LineDate {
+        text-align: right;
+    }
+
+    &__LineEvent--left {
+        flex-direction: row-reverse;
+    }
+
+    &__LineEvent--left>&__LineTitle {
+        text-align: right;
+    }
+
+
+
+    &__LineDate {
+        flex: 1;
+    }
+
+    &__LineDateContent {
+        background: $color4;
+        color: $cfont1;
+        padding: 3px 7px;
+        border-radius: 5px;
+        font-size: 0.9em;
+    }
+
+    &__LineDot {
+        //flex: 1;
+    }
+
+    &__LineDotContent {
+        height: 13px;
+        width: 13px;
+        background: $color4;
+        border-radius: 50%;
+    }
+
+    &__LineTitle {
+        flex: 1;
+    }
+
+    &__LineTitleContent {
+        color: $cfont5;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+
+    &__TimeLineBottom {
+        height: 90px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__LineBottom {
+        background: $color4;
+        height: 100%;
+        width: 4px;
+        border-radius: 5px;
+        position: absolute;
+        margin: 0 auto;
+    }
+
+    &__AddEvent {
+        position: absolute;
+        bottom: 0;
+        width: 35px;
+        height: 35px;
+        background: $color4;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 0px 3px $color5;
+        @include BeforeIcon("\e825", 1.5em, $cfont1, 0);
+    }
+
+
+    &__box {
+        &--ProductInfo {
+            position: relative;
+        }
+    }
+
+    &__BoxBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        position: sticky;
+        top: 0;
+        color: $cfont6;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 77%, rgba(255, 255, 255, 0.4) 100%);
+    }
+
+    &__BoxTitile {
+        font-size: 1.5em;
+        padding: 35px 0 10px 0;
+        margin: 0;
+
+    }
+
+    &__BoxEditButton {
+        opacity: 0.4;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &--save {
+            color: $cfont5;
+            opacity: 1;
+            font-weight: bold;
+        }
+    }
+
+
+
+    &__BoxKat {
+        padding: 0 0 1.5vh 2vw;
+
+        &--StartDate .Product__BoxKatName {
+            @include BeforeIcon("\f274", 1em, $cfont2, 5px);
+        }
+
+        &--EndDate .Product__BoxKatName {
+            @include BeforeIcon("\f273", 1em, $cfont2, 5px);
+        }
+
+        &--Price .Product__BoxKatName {
+            @include BeforeIcon("\f155", 1em, $cfont2, 5px);
+        }
+
+        &--ID .Product__BoxKatName {
+            @include BeforeIcon("\f121", 1em, $cfont2, 5px);
+        }
+
+        &--Seller .Product__BoxKatName {
+            @include BeforeIcon("\f2c0", 1em, $cfont2, 5px);
+        }
+
+        &--PhoneNumber .Product__BoxKatName {
+            @include BeforeIcon("\e859", 1em, $cfont2, 5px);
+        }
+
+        &--SellerAdress .Product__BoxKatName {
+            @include BeforeIcon("\e854", 1em, $cfont2, 5px);
+        }
+
+        &--Note .Product__BoxKatName {
+            @include BeforeIcon("\f298", 1em, $cfont2, 5px);
+        }
+    }
+
+    &__BoxKatNumber {
+        color: $cfont6;
+    }
+
+    &__BoxKatName {
+        font-weight: 200;
+        font-size: 1.2em;
+        margin: 0;
+        padding: 1vh 0 3px 0;
+    }
+
+    &__BoxKatValue {
+        padding: 0 0 0 6vw;
+        font-weight: 100;
+        font-size: 1em;
+        user-select: auto;
+        color: $cfont6;
+
+    }
+
+
+    &__BoxFiles {
+        overflow-y: scroll;
+        display: flex;
+        align-items: baseline;
+        column-gap: 2vw;
+        margin-bottom: 1vh;
+        box-sizing: content-box;
+        scroll-snap-type: x mandatory;
+    }
+
+    &__FilePanel {
+        border: 1px solid $color6;
+        border-radius: 10px;
+        overflow: hidden;
+        flex: 0 0 auto;
+        width: 200px;
+        scroll-snap-align: start;
+        margin-bottom: 1vh;
+    }
+
+    &__FilePanelImgBox {
+        margin: 0 auto;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        background: rgba($color4, 0.1);
+    }
+
+    &__FilePanelImg {
+        height: auto;
+        width: auto;
+        max-width: 200px;
+        max-height: 200px;
+        text-indent: -10000px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 3px;
+    }
+
+    &__FilePanelNoImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include BeforeIcon("\e835", 2em, $cfont6, 0);
+        z-index: -1;
+    }
+
+    &__FilePanelTitle {
+        text-align: start;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        width: 100%;
+        color: white;
+        background: rgba($color7, 0.5);
+        padding-left: 1.5vw;
+    }
+
+    &__FilePanelMenu {
+        margin: 1vh 0 1vh 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    &__FileMenuWatch {
+        @include BeforeIcon("\e86b", 1.2em, $cfont2, 0);
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &__FileMenuEdit {
+        @include BeforeIcon("\e84b", 1.2em, $cfont2, 0);
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &__FileMenuShare {
+        @include BeforeIcon("\f1e0", 1.2em, $cfont2, 0);
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}

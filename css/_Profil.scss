@@ -63,7 +63,7 @@
         height: 120px;
         width: 120px;
         margin-bottom: -60px;
-        box-shadow: 0px -2px 5px $color4, 0px 30px 5px white, inset 0 1px 1px $color4, ;
+        box-shadow: 0px -2px 5px $color4, 0px 30px 5px white, inset 0 1px 1px $color4;
         border: 2px solid $color4;
         position: relative;
         background-color: $color5;
@@ -122,20 +122,11 @@
         box-sizing: border-box;
         padding: 0 20px;
         overflow-y: scroll;
-
-        &::-webkit-scrollbar {
-            width: 3px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background-color: $color4;
-            border-radius: 10px;
-        }
     }
 
-    &__section {}
+    &__box {}
 
-    &__ScTitile {
+    &__BoxTitile {
         font-size: 1.5em;
         padding: 35px 0 10px 0;
         margin: 0;
@@ -150,12 +141,17 @@
         }
     }
 
-    &__ScLink {
+    &__BoxLink {
         color: $cfont6;
         padding: 0 10px 20px 10px;
         display: flex;
         align-items: center;
         font-size: 1.2em;
+
+        &::before {
+            width: 7vw;
+            text-align: center;
+        }
 
         &::after {
             font-family: Fontello;
@@ -174,6 +170,10 @@
 
         &--Uname {
             @include BeforeIcon("\e815", inherit, $cfont6, 3px);
+        }
+
+        &--Uavatra {
+            @include BeforeIcon("\f2be", inherit, $cfont6, 3px);
         }
 
         &--Ulogout {
