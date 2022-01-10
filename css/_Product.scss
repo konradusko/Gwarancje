@@ -83,8 +83,8 @@
         margin-bottom: -60px;
         padding: 3px;
         //!  GRADIENT
-        background: linear-gradient(360deg, $color4 0%, $color4 50%, $color5 0%, $color5 100%);
-        box-shadow: 0px 0px 9px black;
+        background: linear-gradient(360deg, $color4 0%, $color4 100%, $color5 0%, $color5 100%);
+        box-shadow: 0px 0px 9px 2px black;
         position: relative;
         display: flex;
         justify-content: center;
@@ -272,7 +272,7 @@
     }
 
     &__BoxTitile {
-        font-size: 1.5em;
+        font-size: 1.3em;
         padding: 35px 0 10px 0;
         margin: 0;
 
@@ -286,7 +286,7 @@
         }
 
         &--save {
-            color: $cfont5;
+            color: $cfont7;
             opacity: 1;
             font-weight: bold;
         }
@@ -296,6 +296,14 @@
 
     &__BoxKat {
         padding: 0 0 1.5vh 2vw;
+
+        &--Item .Product__BoxKatName {
+            @include BeforeIcon("\f097", 1em, $cfont2, 5px);
+        }
+
+        &--Name .Product__BoxKatName {
+            @include BeforeIcon("\f292", 1em, $cfont2, 5px);
+        }
 
         &--StartDate .Product__BoxKatName {
             @include BeforeIcon("\f274", 1em, $cfont2, 5px);
@@ -336,7 +344,7 @@
 
     &__BoxKatName {
         font-weight: 200;
-        font-size: 1.2em;
+        font-size: 1.1em;
         margin: 0;
         padding: 1vh 0 3px 0;
     }

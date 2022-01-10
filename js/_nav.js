@@ -27,7 +27,6 @@ let DefaultPosition = 0;
 //? Menu i nawigacja
 const getURL = new URLSearchParams(window.location.search);
 const MLink = getURL.get("page");
-const MBox = getURL.get("box");
 
 //!Linki
 switch(MLink) {
@@ -50,19 +49,6 @@ switch(MLink) {
 
 
 
- //!Boxy
- switch(MBox) {
-   case "home":
-   break;
 
-   case "user":
-      document.querySelector(".GW__User").classList.remove("User--hide");
-      document.querySelector(".nav__link").classList.remove("nav__link--active");
-      document.querySelector(`.nav__link--user`).classList.add("nav__link--active");
-   break;
-
-   // default:
-   //   console.log("default");
- }
 
 

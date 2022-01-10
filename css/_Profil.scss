@@ -19,7 +19,9 @@
     &__header {
         background: $color4;
         color: $cfont1;
+        display: block;
         height: 135px;
+        min-height: 135px;
         position: relative;
     }
 
@@ -52,9 +54,9 @@
     }
 
     &__TopFirst {
-        margin-bottom: -30px;
-        font-size: 1.1em;
-        @include BeforeIcon("\e8b0", inherit, $cfont1, 5px);
+        margin-bottom: -20px;
+        font-size: 1em;
+        @include BeforeIcon("\f291", 0.8em, $cfont1, 5px);
         margin-right: auto;
     }
 
@@ -63,6 +65,7 @@
         height: 120px;
         width: 120px;
         margin-bottom: -60px;
+        //margin-bottom: -10vh; 
         box-shadow: 0px -2px 5px $color4, 0px 30px 5px white, inset 0 1px 1px $color4;
         border: 2px solid $color4;
         position: relative;
@@ -91,8 +94,8 @@
 
     &__TopSecond {
         margin-bottom: -30px;
-        font-size: 1.1em;
-        @include AfterIcon("\f291", 0.8em, $cfont1, 5px);
+        font-size: 1em;
+        @include AfterIcon("\e825", inherit, $cfont1, 5px);
         margin-left: auto;
     }
 
@@ -127,7 +130,7 @@
     &__box {}
 
     &__BoxTitile {
-        font-size: 1.5em;
+        font-size: 1.3em;
         padding: 35px 0 10px 0;
         margin: 0;
         color: $cfont6;
@@ -146,7 +149,7 @@
         padding: 0 10px 20px 10px;
         display: flex;
         align-items: center;
-        font-size: 1.2em;
+        font-size: 1.1em;
 
         &::before {
             width: 7vw;
@@ -189,11 +192,7 @@
             @include BeforeIcon("\f290", inherit, $cfont6, 3px);
         }
 
-        &--SbuyAllegro {
-            @include BeforeIcon("\f291", inherit, $cfont6, 3px);
-        }
-
-        &--Senter {
+        &--Sproblem {
             @include BeforeIcon("\e84c", inherit, $cfont6, 3px);
         }
 

@@ -1,113 +1,426 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <!-- Default settings-->
-        <meta charset="UTF-8">
-        <title>Gwarancje</title>
-        <meta name="description" content="OPIS">
-        <meta name="viewport" content="width=device-width,  initial-scale=1, minimum-scale=1, maximum-scale=1", user-scalable=no">
-        <meta name="theme-color" content="#9C27B0">
-        <!--TODO: OG:Media -->
-        <meta property="og:url"                content="https://link.app/" />
-        <meta property="og:type"               content="website" />
-        <meta property="og:title"              content="Nazwa" />
-        <meta property="og:description"        content="Opis dla postów na fb/twitter" />
-        <meta property="og:image"              content="https://link_do_obrazka_dla_socjal_mediów.app/img/other/ogMedia.png" />
-        <!--TODO: Favicon -->
-        <link rel="icon" href="img/other/favicon.ico"><!-- 32×32 -->
-        <link rel="icon" href="img/other/favicon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="img/pwa/icon-180x180.png"><!-- 180×180 -->
-        <!--TODO: PWA -->
-        <meta name="theme-color" content="#fff">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
-        <!--?  <link rel="manifest" href="manifest.json"> -->
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css">
-        <!--TODO: Firebase -->
-        <!-- JS -->
-        <script src="js/_nav.js" defer></script>
-        <script src="js/_profil.js" defer></script>
-        <script src="js/_product.js" defer></script>
-        
-    </head>
-    <body>
-        <main class="GW"> 
-            <!--!  MODUŁ:  Menu      -->
-            <nav class="GW__nav nav">
-                <a class="nav__link nav__link--home nav__link--active" href="?page=home"> </a>
-                <a class="nav__link nav__link--shop" href="?page=shop"> </a>
-                <a class="nav__link nav__link--user" href="?page=user"> </a>
-            </nav>
+<!--!-------------------------------------------------------------------------------------!-->
+<!--?----------------------------------      HEAD      ----------------------------------?-->
+<!--!------------------------------------------------------------------------------------!-->
+
+<head>
+    <!-- Default settings-->
+    <meta charset="UTF-8">
+    <title>Gwarancje</title>
+    <meta name="description" content="OPIS">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, minimum-scale=1, maximum-scale=1" ,
+        user-scalable=no">
+    <meta name="theme-color" content="#9C27B0">
+    <!--TODO: OG:Media -->
+    <meta property="og:url" content="https://link.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nazwa" />
+    <meta property="og:description" content="Opis dla postów na fb/twitter" />
+    <meta property="og:image" content="https://link_do_obrazka_dla_socjal_mediów.app/img/other/ogMedia.png" />
+    <!--TODO: Favicon -->
+    <link rel="icon" href="img/other/favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="img/other/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/pwa/icon-180x180.png"><!-- 180×180 -->
+    <!--TODO: PWA -->
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--?  <link rel="manifest" href="manifest.json"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS -->
+    <script src="js/_nav.js" defer></script>
+    <script src="js/_profil.js" defer></script>
+    <script src="js/_product.js" defer></script>
+    <script src="js/_DialogBox.js" defer></script>
+</head>
+
+<body>
+    <main class="GW">
+        <!--!-------------------------------------------------------------------------------------!-->
+        <!--?----------------------------------  MODUŁ:  Menu  ----------------------------------?-->
+        <!--!------------------------------------------------------------------------------------!-->
+        <nav class="GW__nav nav">
+            <a class="nav__link nav__link--home nav__link--active" href="?page=home"> </a>
+            <a class="nav__link nav__link--shop" href="?page=shop"> </a>
+            <a class="nav__link nav__link--user" href="?page=user"> </a>
+        </nav>
 
 
-            <!--!  WIDOK:  Główny   -->
-            <section class="GW__WarrantyList WarrantyList">
-                <!--!  MODUŁ:   Powiadomienia    -->
-                <aside class="GW__TopInfo TopInfo">
-                    <div class="TopInfo__error">
-                        <noscript>Obsługa skryptów JavaScript jest włączona w Twojej przeglądarce</noscript>
+
+
+
+
+
+
+
+
+        <!--!-------------------------------------------------------------------------------------!-->
+        <!--?-------------------------------  MODUŁ:  Dialog Box  -------------------------------?-->
+        <!--!------------------------------------------------------------------------------------!-->
+        <dialog class="BoxDialog" data-dialogName="additem" data-dialogHeight="50">
+            <div class="BoxDialog__empty"></div>
+
+            <div class="BoxDialog__BoxFull">
+                <div class="BoxDialog__BoxMenu">
+                    <div class="BoxDialog__MenuPart"></div>
+                    <div class="BoxDialog__MenuPart BoxDialog__MenuPart--center"></div>
+                    <div class="BoxDialog__MenuPart"> 
+                        <div class="BoxDialog__MenuClose"></div>
                     </div>
-                    <div class="TopInfo__error TopInfo__error--css">
-                        <span style="color: red">Arkusz motywu nie został załadowany poprawnie</span>
+                </div>
+                <div class="BoxDialog__BoxContent">
+                    xx
+
+                    <div class="BoxDial BoxDial--name">
+                        <div class="BoxDial__ListButton">
+                            <button type="button" class="BoxDial__Button BoxDial__Button--cancel">Anuluj</button>
+                            <button type="button" class="BoxDial__Button BoxDial__Button--accept">Sortuj</button>
+                        </div>
                     </div>
 
-                    <div class="TopInfo__info" data-typinfo="off" data-timeinfo="no">
-                        <!--? Wiadomość na górze strony-->
-                    </div>
-                </aside>
-                <div class="WarrantyList__top">
-                    <header class="WarrantyList__header">
-                        <h1 class="WarrantyList__logo">
-                            GWARANT
-                        </h1>
-                        <div class="WarrantyList__TopMenu">
-                            <a class="WarrantyList__profil" href="?page=user">
-                                <img class="WarrantyList__avatar" src="https://picsum.photos/80/80" alt="">
-                                <div class="WarrantyList__NoAvatar"></div>
-                            </a>
-                            <div class="WarrantyList__add">
-                                <a href="?page=product">
-                                    +
-                                </a>
-                            </div>
-                        </div>
-                    </header>
 
-                    <div class="WarrantyList__StatusBox">
-                        <div class="WarrantyList__StatusBoxInfo">
-                            <div class="WarrantyList__StatusBoxNumber">5</div>
-                            <div class="WarrantyList__StatusBoxName">Aktywne</div>
-                        </div>
-                        <div class="WarrantyList__StatusBoxInfo">
-                            <div class="WarrantyList__StatusBoxNumber">0</div>
-                            <div class="WarrantyList__StatusBoxName">Reklamowane</div>
-                        </div>
-                        <div class="WarrantyList__StatusBoxInfo">
-                            <div class="WarrantyList__StatusBoxNumber">1</div>
-                            <div class="WarrantyList__StatusBoxName">Kończące się</div>
-                        </div>
-                        <div class="WarrantyList__StatusBoxInfo">
-                            <div class="WarrantyList__StatusBoxNumber">2</div>
-                            <div class="WarrantyList__StatusBoxName">Zakończone</div>
-                        </div>
+
+                </div>
+            </div>
+        </dialog>
+
+
+        <!--?       Strona główna ->  Filtry       -->
+        <dialog class="BoxDialog" data-dialogName="filters" data-dialogHeight="30">
+            <div class="BoxDialog__empty"></div>
+            <div class="BoxDialog__BoxFull">
+                <div class="BoxDialog__BoxMenu">
+                    <div class="BoxDialog__MenuPart"></div>
+                    <div class="BoxDialog__MenuPart BoxDialog__MenuPart--center"></div>
+                    <div class="BoxDialog__MenuPart"> 
+                        <div class="BoxDialog__MenuClose"></div>
                     </div>
+                </div>
                 
+                <div class="BoxDialog__BoxContent">
+                    <div class="BoxDial BoxDial--filtrs">
+                        <h4 class="BoxDial__title">
+                            Filtry:
+                        </h4>
+                        <div class="BoxDial__Option BoxDial__Option--filterAZ">
+                            A - Z
+                        </div>
+                        <div class="BoxDial__Option BoxDial__Option--filterZA">
+                            Z - A
+                        </div>
 
-                    <div class="WarrantyList__FiltrBox">
-                        <label class="WarrantyList__FiltrBoxLabel">
-                            <input class="WarrantyList__FiltrBoxInput" type="text" placeholder="Szukaj">
-                        </label>
-                        <a href="javascript:location.search+='&box=user';" class="WarrantyList__FiltrBoxFilters">
-                            Filtry
-                        </a>
+                        <div class="BoxDial__Option BoxDial__Option--filterStart">
+                            Data rozpoczęcia
+                        </div>
+
+                        <div class="BoxDial__Option BoxDial__Option--filterClose">
+                            Data zakończenia
+                        </div>
                     </div>
 
                 </div>
+            </div>
+        </dialog>
 
-                
-                <div class="WarrantyList__ItemsList"> 
-                    <!-- !Element ładowania przed wczytaniem danych z firebasa
+
+        <!--?       Profil -> Zmiana e-mail       -->
+        <dialog class="BoxDialog" data-dialogName="chEmail" data-dialogHeight="35">
+            <div class="BoxDialog__empty"></div>
+            <div class="BoxDialog__BoxFull">
+                <div class="BoxDialog__BoxMenu">
+                    <div class="BoxDialog__MenuPart"></div>
+                    <div class="BoxDialog__MenuPart BoxDialog__MenuPart--center"></div>
+                    <div class="BoxDialog__MenuPart"> 
+                        <div class="BoxDialog__MenuClose"></div>
+                    </div>
+                </div>
+
+                <div class="BoxDialog__BoxContent">
+                    <div class="BoxDial BoxDial--chEmail">
+                        <h4 class="BoxDial__title">
+                            Zmień e-mail:
+                        </h4>
+                        <input type="email" class="BoxDial__input BoxDial__input--chEmail1" placeholder="&#xf0e0;  Obecny adres e-mail" required>
+                        <input type="email" class="BoxDial__input BoxDial__input--chEmail2" placeholder="&#xe809;  Nowy adres e-mail" required>
+
+                        <div class="BoxDial__ListButton">
+                            <button type="button" class="BoxDial__Button BoxDial__Button--cancel">Anuluj</button>
+                            <button type="button" class="BoxDial__Button BoxDial__Button--accept">Zastosuj</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </dialog>
+        
+
+        <!--?       Profil -> Zmiana Hasła       -->
+        <dialog class="BoxDialog" data-dialogName="chPass" data-dialogHeight="40">
+            <div class="BoxDialog__empty"></div>
+            <div class="BoxDialog__BoxFull">
+                <div class="BoxDialog__BoxMenu">
+                    <div class="BoxDialog__MenuPart"></div>
+                    <div class="BoxDialog__MenuPart BoxDialog__MenuPart--center"></div>
+                    <div class="BoxDialog__MenuPart"> 
+                        <div class="BoxDialog__MenuClose"></div>
+                    </div>
+                </div>
+
+                <div class="BoxDialog__BoxContent">
+                    <div class="BoxDial BoxDial--chEmail">
+                        <h4 class="BoxDial__title">
+                            Zmień hasło:
+                        </h4>
+                        <input type="password" class="BoxDial__input BoxDial__input--chPass1" placeholder="&#xf13e;  Obecne hasło" required>
+                        <input type="password" class="BoxDial__input BoxDial__input--chPass2" placeholder="&#xe82e;  Nowe hasło" required>
+                        <input type="password" class="BoxDial__input BoxDial__input--chPass3" placeholder="&#xe82e;  Powtórz nowe hasło" required>
+
+                        <div class="BoxDial__ListButton">
+                            <button type="button" class="BoxDial__Button BoxDial__Button--cancel">Anuluj</button>
+                            <button type="button" class="BoxDial__Button BoxDial__Button--accept">Zastosuj</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </dialog>
+
+
+        <!--?       Profil -> Zmiana nazwy       -->
+        <dialog class="BoxDialog" data-dialogName="chName" data-dialogHeight="32">
+            <div class="BoxDialog__empty"></div>
+            <div class="BoxDialog__BoxFull">
+                <div class="BoxDialog__BoxMenu">
+                    <div class="BoxDialog__MenuPart"></div>
+                    <div class="BoxDialog__MenuPart BoxDialog__MenuPart--center"></div>
+                    <div class="BoxDialog__MenuPart"> 
+                        <div class="BoxDialog__MenuClose"></div>
+                    </div>
+                </div>
+
+                <div class="BoxDialog__BoxContent">
+                    <div class="BoxDial BoxDial--chEmail">
+                        <h4 class="BoxDial__title">
+                            Zmień nazwę:
+                        </h4>
+                        <input type="text" class="BoxDial__input BoxDial__input--chPass1" placeholder="&#xe815;  Nowa nazwa" required>
+                        <input type="text" class="BoxDial__input BoxDial__input--chPass1" placeholder="&#xe815;  Powtórz nową nazwa" required>
+
+                        <div class="BoxDial__ListButton">
+                            <button type="button" class="BoxDial__Button BoxDial__Button--cancel">Anuluj</button>
+                            <button type="button" class="BoxDial__Button BoxDial__Button--accept">Zastosuj</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </dialog>
+
+
+        <!--?       Profil -> Zmiana avatara       -->
+        <dialog class="BoxDialog" data-dialogName="chAvatar" data-dialogHeight="32">
+            <div class="BoxDialog__empty"></div>
+            <div class="BoxDialog__BoxFull">
+                <div class="BoxDialog__BoxMenu">
+                    <div class="BoxDialog__MenuPart"></div>
+                    <div class="BoxDialog__MenuPart BoxDialog__MenuPart--center"></div>
+                    <div class="BoxDialog__MenuPart"> 
+                        <div class="BoxDialog__MenuClose"></div>
+                    </div>
+                </div>
+
+                <div class="BoxDialog__BoxContent">
+                    <div class="BoxDial BoxDial--chEmail">
+                        <h4 class="BoxDial__title">
+                            Zmień avatar:
+                        </h4>
+                        <div class="BoxDial__carousel">
+                            <label class="BoxDial__addFileAvatar">
+                                <input class="BoxDial__addFileAvatarInput" type="file" name="avatar" accept="image/*">
+                                <!--! TU BĘDZIE ŁADOWANY AWATAR PO WGRANIU \/  ten data:image jest po to by nie było alt-->
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="avatar" class="BoxDial__uploadAvatar">
+                            </label>
+
+                            <img src="https://picsum.photos/80/80" alt="avatar" class="BoxDial__defaultAvater">
+                            <img src="https://picsum.photos/81/80" alt="avatar" class="BoxDial__defaultAvater">
+                            <img src="https://picsum.photos/80/81" alt="avatar" class="BoxDial__defaultAvater">
+                            <img src="https://picsum.photos/81/81" alt="avatar" class="BoxDial__defaultAvater">
+
+                        </div>
+                        <div class="BoxDial__ListButton">
+                            <button type="button" class="BoxDial__Button BoxDial__Button--remove">Usuń avatar</button>
+                            <button type="button" class="BoxDial__Button BoxDial__Button--accept">Zastosuj</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </dialog>
+
+
+        <!--?       Profil -> Zmiana avatara       -->
+        <dialog class="BoxDialog" data-dialogName="chAvatar" data-dialogHeight="32">
+            <div class="BoxDialog__empty"></div>
+            <div class="BoxDialog__BoxFull">
+                <div class="BoxDialog__BoxMenu">
+                    <div class="BoxDialog__MenuPart"></div>
+                    <div class="BoxDialog__MenuPart BoxDialog__MenuPart--center"></div>
+                    <div class="BoxDialog__MenuPart"> 
+                        <div class="BoxDialog__MenuClose"></div>
+                    </div>
+                </div>
+
+                <div class="BoxDialog__BoxContent">
+                    <div class="BoxDial BoxDial--chEmail">
+                        <h4 class="BoxDial__title">
+                            Zmień avatar:
+                        </h4>
+                        <div class="BoxDial__carousel">
+                            <label class="BoxDial__addFileAvatar">
+                                <input class="BoxDial__addFileAvatarInput" type="file" name="avatar" accept="image/*">
+                                <!--! TU BĘDZIE ŁADOWANY AWATAR PO WGRANIU \/  ten data:image jest po to by nie było alt-->
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="avatar" class="BoxDial__uploadAvatar">
+                            </label>
+
+                            <img src="https://picsum.photos/80/80" alt="avatar" class="BoxDial__defaultAvater">
+                            <img src="https://picsum.photos/81/80" alt="avatar" class="BoxDial__defaultAvater">
+                            <img src="https://picsum.photos/80/81" alt="avatar" class="BoxDial__defaultAvater">
+                            <img src="https://picsum.photos/81/81" alt="avatar" class="BoxDial__defaultAvater">
+
+                        </div>
+                        <div class="BoxDial__ListButton">
+                            <button type="button" class="BoxDial__Button BoxDial__Button--remove">Usuń avatar</button>
+                            <button type="button" class="BoxDial__Button BoxDial__Button--accept">Zastosuj</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </dialog>
+
+
+        <!--?       Przedmiot -> Dodanie wydarzenia / edycja       -->
+        <dialog class="BoxDialog" data-dialogName="eventItem" data-dialogHeight="50">
+            <div class="BoxDialog__empty"></div>
+            <div class="BoxDialog__BoxFull">
+                <div class="BoxDialog__BoxMenu">
+                    <div class="BoxDialog__MenuPart"></div>
+                    <div class="BoxDialog__MenuPart BoxDialog__MenuPart--center"></div>
+                    <div class="BoxDialog__MenuPart"> 
+                        <div class="BoxDialog__MenuClose"></div>
+                    </div>
+                </div>
+
+                <div class="BoxDialog__BoxContent">
+                    <div class="BoxDial BoxDial--chEmail">
+                        <h4 class="BoxDial__title">
+                            Dodaj wydarzenie:
+                        </h4>
+                        <input type="text" class="BoxDial__input BoxDial__input--eventName" placeholder="&#xe84b;  Tytuł" required>
+                        <input type="date" class="BoxDial__input BoxDial__input--eventDate" placeholder="&#xe85e;" required>
+                        <textarea  class="BoxDial__input BoxDial__input--eventDescription" cols="10" rows="3"  placeholder="&#xf0e5;  Opis"></textarea>
+                        <label class="BoxDial__uploadFile BoxDial__uploadFile--eventUpload">
+                            &#xe848;&nbsp;&nbsp; Załącz plik
+                            <input class="BoxDial__uploadFileInput" type="file">
+                        </label>
+                        
+                        <div class="BoxDial__ListButton">
+                            <button type="button" class="BoxDial__Button BoxDial__Button--cancel">Anuluj</button>
+                            <button type="button" class="BoxDial__Button BoxDial__Button--accept">Zastosuj</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </dialog>        
+
+
+
+
+
+
+        <!--!-------------------------------------------------------------------------------------!-->
+        <!--?---------------------------------- WIDOK:  Główny ----------------------------------?-->
+        <!--!------------------------------------------------------------------------------------!-->
+        <section class="GW__WarrantyList WarrantyList">
+
+
+
+
+
+            <!--!-------------------------------------------------------------------------------------!-->
+            <!--?------------------------------  MODUŁ:  Powiadomienia -------------------------------?-->
+            <!--!------------------------------------------------------------------------------------!-->
+            <aside class="GW__TopInfo TopInfo">
+                <div class="TopInfo__error">
+                    <noscript>Obsługa skryptów JavaScript jest włączona w Twojej przeglądarce</noscript>
+                </div>
+                <div class="TopInfo__error TopInfo__error--css">
+                    <span style="color: red">Arkusz motywu nie został załadowany poprawnie</span>
+                </div>
+
+                <div class="TopInfo__info" data-typinfo="on" data-timeinfo="no">
+                    <!--? Wiadomość na górze strony | zmienić data-typinfo="off" na np alert-->
+                </div>
+            </aside>
+
+
+            
+
+            <div class="WarrantyList__top">
+                <header class="WarrantyList__header">
+                    <h1 class="WarrantyList__logo">
+                        GWARANT
+                    </h1>
+                    <div class="WarrantyList__TopMenu">
+                        <a class="WarrantyList__profil" href="?page=user">
+                            <img class="WarrantyList__avatar" src="https://picsum.photos/80/80" alt="">
+                            <div class="WarrantyList__NoAvatar"></div>
+                        </a>
+                        <div class="WarrantyList__add">
+                            <a href="?page=product">
+                                +
+                            </a>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="WarrantyList__StatusBox">
+                    <div class="WarrantyList__StatusBoxInfo">
+                        <div class="WarrantyList__StatusBoxNumber">5</div>
+                        <div class="WarrantyList__StatusBoxName">Aktywne</div>
+                    </div>
+                    <div class="WarrantyList__StatusBoxInfo">
+                        <div class="WarrantyList__StatusBoxNumber">0</div>
+                        <div class="WarrantyList__StatusBoxName">Reklamowane</div>
+                    </div>
+                    <div class="WarrantyList__StatusBoxInfo">
+                        <div class="WarrantyList__StatusBoxNumber">1</div>
+                        <div class="WarrantyList__StatusBoxName">Kończące się</div>
+                    </div>
+                    <div class="WarrantyList__StatusBoxInfo">
+                        <div class="WarrantyList__StatusBoxNumber">2</div>
+                        <div class="WarrantyList__StatusBoxName">Zakończone</div>
+                    </div>
+                </div>
+
+
+                <div class="WarrantyList__FiltrBox">
+                    <label class="WarrantyList__FiltrBoxLabel">
+                        <input class="WarrantyList__FiltrBoxInput" type="text" placeholder="Szukaj">
+                    </label>
+                    <a href="javascript:location.search+='&box=filters';" class="WarrantyList__FiltrBoxFilters">
+                        Filtry
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="WarrantyList__ItemsList">
+                <!-- !Element ładowania przed wczytaniem danych z firebasa
                     <div class="WarrantyList__item WarrantyList__item--loading" >
                         <div class="WarrantyList__ItemFirstPart--loading">
                             <div class="WarrantyList__ItemDot--loading"></div>
@@ -126,387 +439,418 @@
                     </div>
                     -->
 
-                    <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="young" data-TypeItem="warranty">
-                        <div class="WarrantyList__ItemFirstPart">
-                            <img class="WarrantyList__ItemImg" src="https://picsum..photos/65/65" alt="">
-                            <div class="WarrantyList__ItemNoImg"></div>
-                            <div class="WarrantyList__ItemDot"></div>
+                <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="young" data-TypeItem="warranty">
+                    <div class="WarrantyList__ItemFirstPart">
+                        <img class="WarrantyList__ItemImg" src="https://picsum..photos/65/65" alt="">
+                        <div class="WarrantyList__ItemNoImg"></div>
+                        <div class="WarrantyList__ItemDot"></div>
+                    </div>
+                    <div class="WarrantyList__ItemSecondPart">
+                        <h2 class="WarrantyList__ItemName">
+                            Nowa
+                        </h2>
+                        <p class="WarrantyList__ItemDescription">
+                            Okres gwarancyjny: xx.xx.xx - xx.xx.xx
+                        </p>
+                    </div>
+                    <div class="WarrantyList__ItemThirdPart">
+                        21 dni
+                    </div>
+                </div>
+
+                <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="young" data-TypeItem="warranty">
+                    <div class="WarrantyList__ItemFirstPart">
+                        <img class="WarrantyList__ItemImg" src="https://picsum..photos/65/65" alt="">
+                        <div class="WarrantyList__ItemNoImg"></div>
+                        <div class="WarrantyList__ItemDot"></div>
+                    </div>
+                    <div class="WarrantyList__ItemSecondPart">
+                        <h2 class="WarrantyList__ItemName">
+                            Nowa
+                        </h2>
+                        <p class="WarrantyList__ItemDescription">
+                            Okres gwarancyjny: xx.xx.xx - xx.xx.xx
+                        </p>
+                    </div>
+                    <div class="WarrantyList__ItemThirdPart">
+                        21 dni
+                    </div>
+                </div>
+
+                <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="young" data-TypeItem="warranty">
+                    <div class="WarrantyList__ItemFirstPart">
+                        <img class="WarrantyList__ItemImg" src="https://picsum..photos/65/65" alt="">
+                        <div class="WarrantyList__ItemNoImg"></div>
+                        <div class="WarrantyList__ItemDot"></div>
+                    </div>
+                    <div class="WarrantyList__ItemSecondPart">
+                        <h2 class="WarrantyList__ItemName">
+                            Nowa
+                        </h2>
+                        <p class="WarrantyList__ItemDescription">
+                            Okres gwarancyjny: xx.xx.xx - xx.xx.xx
+                        </p>
+                    </div>
+                    <div class="WarrantyList__ItemThirdPart">
+                        21 dni
+                    </div>
+                </div>
+
+                <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="young" data-TypeItem="warranty">
+                    <div class="WarrantyList__ItemFirstPart">
+                        <img class="WarrantyList__ItemImg" src="https://picsum..photos/65/65" alt="">
+                        <div class="WarrantyList__ItemNoImg"></div>
+                        <div class="WarrantyList__ItemDot"></div>
+                    </div>
+                    <div class="WarrantyList__ItemSecondPart">
+                        <h2 class="WarrantyList__ItemName">
+                            Nowa
+                        </h2>
+                        <p class="WarrantyList__ItemDescription">
+                            Okres gwarancyjny: xx.xx.xx - xx.xx.xx
+                        </p>
+                    </div>
+                    <div class="WarrantyList__ItemThirdPart">
+                        21 dni
+                    </div>
+                </div>
+
+                <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="medium" data-TypeItem="family">
+                    <div class="WarrantyList__ItemFirstPart">
+                        <img class="WarrantyList__ItemImg" src="https://picsum.photos/64/65">
+                        <div class="WarrantyList__ItemNoImg"></div>
+                        <div class="WarrantyList__ItemDot"></div>
+                    </div>
+                    <div class="WarrantyList__ItemSecondPart">
+                        <h2 class="WarrantyList__ItemName">
+                            Średnie
+                        </h2>
+                        <p class="WarrantyList__ItemDescription">
+                            Okres gwarancyjny: xx.xx.xx - xx.xx.xx
+                        </p>
+                    </div>
+                    <div class="WarrantyList__ItemThirdPart">
+                        234 dni
+                    </div>
+                </div>
+
+                <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="old" data-TypeItem="family">
+                    <div class="WarrantyList__ItemFirstPart">
+                        <img class="WarrantyList__ItemImg" src="https://picsum.photos/65/64">
+                        <div class="WarrantyList__ItemNoImg"></div>
+                        <div class="WarrantyList__ItemDot"></div>
+                    </div>
+                    <div class="WarrantyList__ItemSecondPart">
+                        <h2 class="WarrantyList__ItemName">
+                            Stare
+                        </h2>
+                        <p class="WarrantyList__ItemDescription">
+                            Okres gwarancyjny: xx.xx.xx - xx.xx.xx
+                        </p>
+                    </div>
+                    <div class="WarrantyList__ItemThirdPart">
+                        5 dni
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <!--!-------------------------------------------------------------------------------------!-->
+        <!--?----------------------------------  WIDOK:  Profil ----------------------------------?-->
+        <!--!------------------------------------------------------------------------------------!-->
+        <section class="GW__User User User--hide">
+            <header class="User__header">
+                <h2 class="User__title">Witaj Tomek</h2>
+                <div class="User__TopMenu">
+                    <div class="User__CenterBox">
+                        <div class="User__TopFirst">Kup sloty</div>
+                    </div>
+                    <div class="User__CenterBox">
+                        <div class="User__TopAvatar">
+                            <img class="User__TopAvatarImg" src="https://picsum.photos/120/120" alt="">
+                            <div class="User__TopAvatarNoImg"></div>
                         </div>
-                        <div class="WarrantyList__ItemSecondPart">
-                            <h2 class="WarrantyList__ItemName">
-                                Nowa
-                            </h2>
-                            <p class="WarrantyList__ItemDescription">
-                                Okres gwarancyjny: xx.xx.xx - xx.xx.xx
-                            </p>
+                    </div>
+                    <div class="User__CenterBox">
+                        <div class="User__TopSecond">Nowa gwar.</div>
+                    </div>
+                </div>
+            </header>
+            <div class="User__BottomMenu">
+                <div class="User__BottomFirst">
+                    Sloty wolne
+                    <div>
+                        10
+                    </div>
+                </div>
+                <div class="User__BottomSecond">
+                    Sloty zajęte
+                    <div>
+                        2
+                    </div>
+                </div>
+            </div>
+            <div class="User__SettingList">
+
+                <div class="User__box">
+                    <H3 class="User__BoxTitile User__BoxTitile--first">
+                        Konto
+                    </H3>
+                    <a href="javascript:location.search+='&box=chEmail';" class="User__BoxLink User__BoxLink--Uemail">
+                        Zmień e-mail
+                    </a>
+                    <a href="javascript:location.search+='&box=chPass';" class="User__BoxLink User__BoxLink--Upassword">
+                        Zmień hasło
+                    </a>
+                    <a href="javascript:location.search+='&box=chName';" class="User__BoxLink User__BoxLink--Uname">
+                        Zmień nazwę
+                    </a>
+                    <a href="javascript:location.search+='&box=chAvatar';" class="User__BoxLink User__BoxLink--Uavatra">
+                        Zmień avatar
+                    </a>
+                    <a href="#" class="User__BoxLink User__BoxLink--Ulogout">
+                        Wyloguj
+                    </a>
+                </div>
+
+                <div class="User__box">
+                    <H3 class="User__BoxTitile">
+                        Sloty
+                    </H3>
+                    <a href="#" class="User__BoxLink User__BoxLink--Sbuy">
+                        Kup klucz
+                    </a>
+                    <a href="#" class="User__BoxLink User__BoxLink--Sproblem">
+                        Zgłoś problem
+                    </a>
+                </div>
+
+                <div class="User__box">
+                    <H3 class="User__BoxTitile">
+                        O aplikacji
+                    </H3>
+                    <a href="#" class="User__BoxLink User__BoxLink--Aupdate">
+                        Aktualizacje
+                    </a>
+                    <a href="#" class="User__BoxLink User__BoxLink--Ahelp">
+                        Pomoc
+                    </a>
+                    <a href="#" class="User__BoxLink User__BoxLink--Arules">
+                        Regulamin
+                    </a>
+                    <a href="#" class="User__BoxLink User__BoxLink--Aprivacy">
+                        Polityka prywatności
+                    </a>
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!--!-------------------------------------------------------------------------------------!-->
+        <!--?---------------------------------- WIDOK:  Produkt ----------------------------------?-->
+        <!--!------------------------------------------------------------------------------------!-->
+        <section class="GW__Product Product Product--hide">
+            <header class="Product__header">
+                <h2 class="Product__title">Aparat</h2>
+                <h3 class="Product__nameItem">Sony X3000</h3>
+                <div class="Product__TopMenu">
+                    <div class="Product__CenterBox">
+                        <div class="Product__TopFirst">99 %</div>
+                    </div>
+                    <div class="Product__CenterBox">
+                        <div class="Product__TopImage" data-gradientprocent="65">
+                            <img class="Product__TopImageImg" src="https://picsum.photos/500/500" alt="">
+                            <div class="Product__TopImageNoImg"></div>
                         </div>
-                        <div class="WarrantyList__ItemThirdPart"> 
-                            21 dni
+                    </div>
+                    <div class="Product__CenterBox">
+                        <div class="Product__TopSecond">729 dni</div>
+                    </div>
+                </div>
+            </header>
+            <div class="Product__Description">
+                <div class="Product__TimeLineTop">
+                    <div class="Product__LineTop"></div>
+                </div>
+                <div class="Product__TimeLine ">
+                    <div class="Product__Line"></div>
+
+                    <div class="Product__LineEvent Product__LineEvent--right">
+                        <div class="Product__LineDate">
+                            <span class="Product__LineDateContent">28.08.2020</span>
+                        </div>
+                        <div class="Product__LineDot">
+                            <div class="Product__LineDotContent"></div>
+                        </div>
+                        <div class="Product__LineTitle">
+                            <span class="Product__LineTitleContent">Rozpoczęcie gwarancji</span>
                         </div>
                     </div>
 
-                    <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="young" data-TypeItem="warranty">
-                        <div class="WarrantyList__ItemFirstPart">
-                            <img class="WarrantyList__ItemImg" src="https://picsum..photos/65/65" alt="">
-                            <div class="WarrantyList__ItemNoImg"></div>
-                            <div class="WarrantyList__ItemDot"></div>
+                    <div class="Product__LineEvent Product__LineEvent--left">
+                        <div class="Product__LineDate">
+                            <span class="Product__LineDateContent">28.08.2020</span>
                         </div>
-                        <div class="WarrantyList__ItemSecondPart">
-                            <h2 class="WarrantyList__ItemName">
-                                Nowa
-                            </h2>
-                            <p class="WarrantyList__ItemDescription">
-                                Okres gwarancyjny: xx.xx.xx - xx.xx.xx
-                            </p>
+                        <div class="Product__LineDot">
+                            <div class="Product__LineDotContent"></div>
                         </div>
-                        <div class="WarrantyList__ItemThirdPart"> 
-                            21 dni
+                        <div class="Product__LineTitle">
+                            <span class="Product__LineTitleContent">Rozpoczęcie gwarancji asdasd asd ad a</span>
                         </div>
                     </div>
 
-                    <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="young" data-TypeItem="warranty">
-                        <div class="WarrantyList__ItemFirstPart">
-                            <img class="WarrantyList__ItemImg" src="https://picsum..photos/65/65" alt="">
-                            <div class="WarrantyList__ItemNoImg"></div>
-                            <div class="WarrantyList__ItemDot"></div>
+                    <div class="Product__LineEvent Product__LineEvent--left">
+                        <div class="Product__LineDate">
+                            <span class="Product__LineDateContent">28.08.2020</span>
                         </div>
-                        <div class="WarrantyList__ItemSecondPart">
-                            <h2 class="WarrantyList__ItemName">
-                                Nowa
-                            </h2>
-                            <p class="WarrantyList__ItemDescription">
-                                Okres gwarancyjny: xx.xx.xx - xx.xx.xx
-                            </p>
+                        <div class="Product__LineDot">
+                            <div class="Product__LineDotContent"></div>
                         </div>
-                        <div class="WarrantyList__ItemThirdPart"> 
-                            21 dni
-                        </div>
-                    </div>
-
-                    <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="young" data-TypeItem="warranty">
-                        <div class="WarrantyList__ItemFirstPart">
-                            <img class="WarrantyList__ItemImg" src="https://picsum..photos/65/65" alt="">
-                            <div class="WarrantyList__ItemNoImg"></div>
-                            <div class="WarrantyList__ItemDot"></div>
-                        </div>
-                        <div class="WarrantyList__ItemSecondPart">
-                            <h2 class="WarrantyList__ItemName">
-                                Nowa
-                            </h2>
-                            <p class="WarrantyList__ItemDescription">
-                                Okres gwarancyjny: xx.xx.xx - xx.xx.xx
-                            </p>
-                        </div>
-                        <div class="WarrantyList__ItemThirdPart"> 
-                            21 dni
-                        </div>
-                    </div>
-
-                    <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="medium" data-TypeItem="family">
-                        <div class="WarrantyList__ItemFirstPart">
-                            <img class="WarrantyList__ItemImg" src="https://picsum.photos/64/65">
-                            <div class="WarrantyList__ItemNoImg"></div>
-                            <div class="WarrantyList__ItemDot"></div>
-                        </div>
-                        <div class="WarrantyList__ItemSecondPart">
-                            <h2 class="WarrantyList__ItemName">
-                                Średnie 
-                            </h2>
-                            <p class="WarrantyList__ItemDescription">
-                                Okres gwarancyjny: xx.xx.xx - xx.xx.xx
-                            </p>
-                        </div>
-                        <div class="WarrantyList__ItemThirdPart"> 
-                            234 dni
-                        </div>
-                    </div>
-
-                    <div class="WarrantyList__item" data-IdItem="x" data-StatusItem="old" data-TypeItem="family">
-                        <div class="WarrantyList__ItemFirstPart">
-                            <img class="WarrantyList__ItemImg" src="https://picsum.photos/65/64">
-                            <div class="WarrantyList__ItemNoImg"></div>
-                            <div class="WarrantyList__ItemDot"></div>
-                        </div>
-                        <div class="WarrantyList__ItemSecondPart">
-                            <h2 class="WarrantyList__ItemName">
-                                Stare
-                            </h2>
-                            <p class="WarrantyList__ItemDescription">
-                                Okres gwarancyjny: xx.xx.xx - xx.xx.xx
-                            </p>
-                        </div>
-                        <div class="WarrantyList__ItemThirdPart"> 
-                            5 dni
+                        <div class="Product__LineTitle">
+                            <span class="Product__LineTitleContent">Zakończenie gwarancji</span>
                         </div>
                     </div>
 
                 </div>
-
-            </section>
-        
-
-            <!--!    WIDOK:  Profil      -->
-            <section class="GW__User User User--hide">
-                <header class="User__header">
-                    <h2 class="User__title">Witaj Tomek</h2>
-                    <div class="User__TopMenu">
-                        <div class="User__CenterBox">
-                            <div class="User__TopFirst">Wpisz kod</div>
-                        </div>
-                        <div class="User__CenterBox">
-                            <div class="User__TopAvatar">
-                                <img class="User__TopAvatarImg"  src="https://picsum.photos/120/120" alt="">
-                                <div class="User__TopAvatarNoImg"></div>
-                            </div>
-                        </div>
-                        <div class="User__CenterBox"> 
-                            <div class="User__TopSecond">Kup Slot</div>
-                        </div>
-                    </div>
-                </header>
-                <div class="User__BottomMenu">
-                    <div class="User__BottomFirst">
-                        Sloty wolne
-                        <div>
-                            10
-                        </div>
-                    </div>
-                    <div class="User__BottomSecond">
-                        Sloty zajęte
-                        <div>
-                            2
-                        </div>
-                    </div>
+                <div class="Product__TimeLineBottom">
+                    <div class="Product__LineBottom"></div>
+                    <a href="javascript:location.search+='&box=eventItem';" class="Product__AddEvent"></a>
                 </div>
-                <div class="User__SettingList">
-
-                    <div class="User__box">
-                        <H3 class="User__BoxTitile User__BoxTitile--first">
-                            Konto
-                        </H3>
-                        <a href="#" class="User__BoxLink User__BoxLink--Uemail">
-                            Zmień e-mail
-                        </a>
-                        <a href="#" class="User__BoxLink User__BoxLink--Upassword">
-                            Zmień hasło
-                        </a>
-                        <a href="#" class="User__BoxLink User__BoxLink--Uname">
-                            Zmień nazwę
-                        </a>
-                        <a href="#" class="User__BoxLink User__BoxLink--Uavatra">
-                            Zmień avatar
-                        </a>
-                        <a href="#" class="User__BoxLink User__BoxLink--Ulogout">
-                            Wyloguj
-                        </a>
-                    </div>
-
-                    <div class="User__box">
-                        <H3 class="User__BoxTitile">
-                            Sloty
-                        </H3>
-                        <a href="#" class="User__BoxLink User__BoxLink--Sbuy">
-                            Kup klucz
-                        </a>
-                        <a href="#" class="User__BoxLink User__BoxLink--SbuyAllegro">
-                            Kup klucz na allegro
-                        </a>
-                        <a href="#" class="User__BoxLink User__BoxLink--Senter">
-                            Wprowadź klucz
-                        </a>
-                    </div>
-
-                    <div class="User__box">
-                        <H3 class="User__BoxTitile">
-                            O aplikacji
-                        </H3>
-                        <a href="#" class="User__BoxLink User__BoxLink--Aupdate">
-                            Aktualizacje
-                        </a>
-                        <a href="#" class="User__BoxLink User__BoxLink--Ahelp">
-                            Pomoc
-                        </a>
-                        <a href="#" class="User__BoxLink User__BoxLink--Arules">
-                            Regulamin
-                        </a>
-                        <a href="#" class="User__BoxLink User__BoxLink--Aprivacy">
-                            Polityka prywatności
-                        </a>
-                        
-                    </div>
-                    
-
-                </div>
-            </section>
-
-
-            <!--!    WIDOK:  Produkt     -->
-            <section class="GW__Product Product Product--hide">
-                <header class="Product__header">
-                    <h2 class="Product__title">Aparat</h2>
-                    <h3 class="Product__nameItem">Sony X3000</h3>
-                    <div class="Product__TopMenu">
-                        <div class="Product__CenterBox">
-                            <div class="Product__TopFirst">99 %</div>
-                        </div>
-                        <div class="Product__CenterBox">
-                            <div class="Product__TopImage">
-                                <img class="Product__TopImageImg"  src="https://picsum.photos/500/500" alt="">
-                                <div class="Product__TopImageNoImg"></div>
-                            </div>
-                        </div>
-                        <div class="Product__CenterBox"> 
-                            <div class="Product__TopSecond">729 dni</div>
-                        </div>
-                    </div>
-                </header>
-                <div class="Product__Description">
-                    <div class="Product__TimeLineTop">
-                        <div class="Product__LineTop"></div>
-                    </div>
-                    <div class="Product__TimeLine ">
-                        <div class="Product__Line"></div>
-
-                        <div class="Product__LineEvent Product__LineEvent--right">
-                            <div class="Product__LineDate">
-                                <span class="Product__LineDateContent">28.08.2020</span>
-                            </div>
-                            <div class="Product__LineDot">
-                                <div class="Product__LineDotContent"></div>
-                            </div>
-                            <div class="Product__LineTitle">
-                                <span class="Product__LineTitleContent">Rozpoczęcie gwarancji</span>
-                            </div>
-                        </div>
-
-                        <div class="Product__LineEvent Product__LineEvent--left">
-                            <div class="Product__LineDate">
-                                <span class="Product__LineDateContent">28.08.2020</span>
-                            </div>
-                            <div class="Product__LineDot">
-                                <div class="Product__LineDotContent"></div>
-                            </div>
-                            <div class="Product__LineTitle">
-                                <span class="Product__LineTitleContent">Rozpoczęcie gwarancji asdasd asd ad a</span>
-                            </div>
-                        </div>
-
-                        <div class="Product__LineEvent Product__LineEvent--left">
-                            <div class="Product__LineDate">
-                                <span class="Product__LineDateContent">28.08.2020</span>
-                            </div>
-                            <div class="Product__LineDot">
-                                <div class="Product__LineDotContent"></div>
-                            </div>
-                            <div class="Product__LineTitle">
-                                <span class="Product__LineTitleContent">Zakończenie gwarancji</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="Product__TimeLineBottom">
-                        <div class="Product__LineBottom"></div>
-                        <div class="Product__AddEvent"></div>
-                    </div>
-                    <div class="Product__box Product__box--ProductInfo">
-                        <div class="Product__BoxBar">
-                            <H3 class="Product__BoxTitile">
-                                Informacje
-                            </H3>
-                            <div class="Product__BoxEditButton ">
-                                Edytuj
-                            </div>
-                        </div>
-                        <div class="Product__BoxKat Product__BoxKat--StartDate">
-                            <H4 class="Product__BoxKatName">Data rozpoczęcia gwarancji</H4>
-                            <div class="Product__BoxKatValue">25.03.2021</div>
-                        </div>
-                        <div class="Product__BoxKat Product__BoxKat--EndDate">
-                            <H4 class="Product__BoxKatName">Data zakończenia gwarancji</H4>
-                            <div class="Product__BoxKatValue">25.03.2021</div>
-                        </div>
-                        <div class="Product__BoxKat Product__BoxKat--Price">
-                            <H4 class="Product__BoxKatName">Cena zakupu</H4>
-                            <div class="Product__BoxKatValue">2 500zł</div>
-                        </div>
-                        <div class="Product__BoxKat Product__BoxKat--ID">
-                            <H4 class="Product__BoxKatName">Identyfikator przedmiotu</H4>
-                            <div class="Product__BoxKatValue">IMEI: 494858180754032</div>
-                        </div>
-
-                        <div class="Product__BoxKat Product__BoxKat--Seller">
-                            <H4 class="Product__BoxKatName">Nazwa sprzedawcy</H4>
-                            <div class="Product__BoxKatValue">Fuszerka sp. z.o.o</div>
-                        </div>
-                        <div class="Product__BoxKat Product__BoxKat--SellerAdress">
-                            <H4 class="Product__BoxKatName">Adres sprzedawcy</H4>
-                            <div class="Product__BoxKatValue">
-                                <address>
-                                    <div>ul. Nosacza 67</div>
-                                    <div>20-100 Puławy</div>
-                                </address>
-                            </div>
-                        </div>
-                        <div class="Product__BoxKat Product__BoxKat--PhoneNumber">
-                            <H4 class="Product__BoxKatName">Numer telefonu</H4>
-                            <div class="Product__BoxKatValue">
-                                <a href="tel:+48-997-998-999" class="Product__BoxKatNumber">+48 997 998 999</a>
-                            </div>
-                        </div>
-                        <div class="Product__BoxKat Product__BoxKat--Note">
-                            <H4 class="Product__BoxKatName">Notatka</H4>
-                            <div class="Product__BoxKatValue">
-                                Tutaj opis 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="Product__box">
+                <div class="Product__box Product__box--ProductInfo">
+                    <div class="Product__BoxBar">
                         <H3 class="Product__BoxTitile">
-                            Pliki
+                            Informacje
                         </H3>
-                        <div class="Product__BoxFiles">
+                        <div class="Product__BoxEditButton ">
+                            Edytuj
+                        </div>
+                    </div>
+                    <div class="Product__BoxKat Product__BoxKat--Item">
+                        <H4 class="Product__BoxKatName">Przedmiot</H4>
+                        <div class="Product__BoxKatValue">Aparat</div>
+                    </div>
+                    <div class="Product__BoxKat Product__BoxKat--Name">
+                        <H4 class="Product__BoxKatName">Marka oraz model</H4>
+                        <div class="Product__BoxKatValue">Sony X3000</div>
+                    </div>
+                    <div class="Product__BoxKat Product__BoxKat--StartDate">
+                        <H4 class="Product__BoxKatName">Data rozpoczęcia gwarancji</H4>
+                        <div class="Product__BoxKatValue">25.03.2021</div>
+                    </div>
+                    <div class="Product__BoxKat Product__BoxKat--EndDate">
+                        <H4 class="Product__BoxKatName">Data zakończenia gwarancji</H4>
+                        <div class="Product__BoxKatValue">25.03.2021</div>
+                    </div>
+                    <div class="Product__BoxKat Product__BoxKat--Price">
+                        <H4 class="Product__BoxKatName">Cena zakupu</H4>
+                        <div class="Product__BoxKatValue">2 500zł</div>
+                    </div>
+                    <div class="Product__BoxKat Product__BoxKat--ID">
+                        <H4 class="Product__BoxKatName">Identyfikator przedmiotu</H4>
+                        <div class="Product__BoxKatValue">IMEI: 494858180754032</div>
+                    </div>
 
-                            <div class="Product__FilePanel">
-                                <div class="Product__FilePanelImgBox">
-                                    <img src="https://picsum.photos/500/500" alt="Produkt" class="Product__FilePanelImg">
-                                    <div class="Product__FilePanelNoImg"></div>
-                                    <div class="Product__FilePanelTitle">Produkt</div>
-                                </div>
-                                <div class="Product__FilePanelMenu">
-                                    <div class="Product__FileMenuWatch"></div>
-                                    <div class="Product__FileMenuEdit"></div>
-                                    <div class="Product__FileMenuShare"></div>
-                                </div>
-                            </div>
-                            <div class="Product__FilePanel">
-                                <div class="Product__FilePanelImgBox">
-                                    <img src="https://picsum.photos/501/501" alt="Produkt" class="Product__FilePanelImg">
-                                    <div class="Product__FilePanelNoImg"></div>
-                                    <div class="Product__FilePanelTitle">Gwarancja - plik 1</div>
-                                </div>
-                                <div class="Product__FilePanelMenu">
-                                    <div class="Product__FileMenuWatch"></div>
-                                    <div class="Product__FileMenuEdit"></div>
-                                    <div class="Product__FileMenuShare"></div>
-                                </div>
-                            </div>
-                            <div class="Product__FilePanel">
-                                <div class="Product__FilePanelImgBox">
-                                    <img src="https://picsum.photos/501/500" alt="Produkt" class="Product__FilePanelImg">
-                                    <div class="Product__FilePanelNoImg"></div>
-                                    <div class="Product__FilePanelTitle">Gwarancja - plik 2</div>
-                                </div>
-                                <div class="Product__FilePanelMenu">
-                                    <div class="Product__FileMenuWatch"></div>
-                                    <div class="Product__FileMenuEdit"></div>
-                                    <div class="Product__FileMenuShare"></div>
-                                </div>
-                            </div>
-
+                    <div class="Product__BoxKat Product__BoxKat--Seller">
+                        <H4 class="Product__BoxKatName">Nazwa sprzedawcy</H4>
+                        <div class="Product__BoxKatValue">Fuszerka sp. z.o.o</div>
+                    </div>
+                    <div class="Product__BoxKat Product__BoxKat--SellerAdress">
+                        <H4 class="Product__BoxKatName">Adres sprzedawcy</H4>
+                        <div class="Product__BoxKatValue">
+                            <address>
+                                <div>ul. Nosacza 67</div>
+                                <div>20-100 Puławy</div>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="Product__BoxKat Product__BoxKat--PhoneNumber">
+                        <H4 class="Product__BoxKatName">Numer telefonu</H4>
+                        <div class="Product__BoxKatValue">
+                            <a href="tel:+48-997-998-999" class="Product__BoxKatNumber">+48 997 998 999</a>
+                        </div>
+                    </div>
+                    <div class="Product__BoxKat Product__BoxKat--Note">
+                        <H4 class="Product__BoxKatName">Notatka</H4>
+                        <div class="Product__BoxKatValue">
+                            Tutaj opis
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-    </body>
+                <div class="Product__box">
+                    <H3 class="Product__BoxTitile">
+                        Pliki
+                    </H3>
+                    <div class="Product__BoxFiles">
+
+                        <div class="Product__FilePanel">
+                            <div class="Product__FilePanelImgBox">
+                                <img src="https://picsum.photos/500/500" alt="Produkt" class="Product__FilePanelImg">
+                                <div class="Product__FilePanelNoImg"></div>
+                                <div class="Product__FilePanelTitle">Produkt</div>
+                            </div>
+                            <div class="Product__FilePanelMenu">
+                                <div class="Product__FileMenuWatch"></div>
+                                <div class="Product__FileMenuEdit"></div>
+                                <div class="Product__FileMenuShare"></div>
+                            </div>
+                        </div>
+                        <div class="Product__FilePanel">
+                            <div class="Product__FilePanelImgBox">
+                                <img src="https://picsum.photos/501/501" alt="Produkt" class="Product__FilePanelImg">
+                                <div class="Product__FilePanelNoImg"></div>
+                                <div class="Product__FilePanelTitle">Gwarancja - plik 1</div>
+                            </div>
+                            <div class="Product__FilePanelMenu">
+                                <div class="Product__FileMenuWatch"></div>
+                                <div class="Product__FileMenuEdit"></div>
+                                <div class="Product__FileMenuShare"></div>
+                            </div>
+                        </div>
+                        <div class="Product__FilePanel">
+                            <div class="Product__FilePanelImgBox">
+                                <img src="https://picsum.photos/501/500" alt="Produkt" class="Product__FilePanelImg">
+                                <div class="Product__FilePanelNoImg"></div>
+                                <div class="Product__FilePanelTitle">Gwarancja - plik 2</div>
+                            </div>
+                            <div class="Product__FilePanelMenu">
+                                <div class="Product__FileMenuWatch"></div>
+                                <div class="Product__FileMenuEdit"></div>
+                                <div class="Product__FileMenuShare"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </main>
+</body>
+
 </html>

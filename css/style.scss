@@ -81,12 +81,32 @@ a {
 }
 
 
+//Input data
+input[type="date"] {
+    position: relative;
+    padding-left: 20px;
+    background: $color5;
+
+    &::before {
+        position: absolute;
+        font-family: "Fontello";
+        color: #999999;
+        content: attr(placeholder);
+        left: 5px;
+    }
+}
 
 
 
-//? Strony:\
+
+
+//? Strony i moduły:
+//*Moduł:
 @import 'Nav';
 @import 'TopInfo';
+@import 'DialogBox';
+
+//*Strony:
 @import 'WarrantyList';
 @import 'Profil';
 @import 'Product';

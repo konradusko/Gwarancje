@@ -1,0 +1,256 @@
+.BoxDialog {
+    z-index: 999999;
+    bottom: 0;
+    top: unset;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    user-select: auto;
+    background: rgba(0, 0, 0, .5);
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__empty {
+        height: 100%;
+        scroll-snap-align: start;
+        touch-action: none;
+    }
+
+    &__BoxFull {
+        overflow: hidden; //! UWAGA JAK COŚ SIĘ PSUJE
+        margin: 0 3px;
+        background: $color5;
+        padding: 0 0 10% 0;
+        border-radius: 10px 10px 0 0;
+        height: calc(100% - 3vh);
+        scroll-snap-align: start;
+    }
+
+    &__BoxMenu {
+        padding: 0 2vw;
+        display: flex;
+        margin-bottom: 2vh;
+    }
+
+    &__MenuPart {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        &--center {
+            height: 3px;
+            border-radius: 5px;
+            background: $color1;
+            align-self: center;
+        }
+    }
+
+    &__MenuClose {
+        margin-left: auto;
+        @include AfterIcon("\e822", 1em, $cfont6, 0);
+    }
+
+    &__BoxContent {
+        box-sizing: border-box;
+        padding: 0 2vw;
+        height: calc(100% - 3vh);
+        touch-action: none;
+    }
+
+}
+
+
+
+.BoxDial {
+
+    //! -----------------------------------------------------------
+    //? HOME > FILTRY 
+    //! -----------------------------------------------------------
+    &--filtrs {}
+
+
+
+
+
+    &__title {
+        margin: 0;
+        padding: 0 5vw 10px 5vw;
+        color: $cfont6;
+    }
+
+
+
+    &__ListButton {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 25px;
+        background: $color5;
+    }
+
+
+    //TODO: dodać styl po klikneciu 
+    &__Button {
+        padding: 1.5vh 12vw;
+        border-radius: 8px;
+        border: none;
+        font-size: 1.1em;
+        color: $cfont1;
+
+        &--cancel {
+            background-color: $color6;
+        }
+
+        &--remove {
+            background-color: $color6;
+        }
+
+        &--accept {
+            background-color: $color4;
+        }
+    }
+
+    &__Option {
+        padding: 1.2vh 6vw;
+        user-select: none;
+        display: block;
+
+        &:hover::before {
+            opacity: 0.2;
+        }
+
+        &--filterAZ {
+            @include BeforeIcon("\f15d", inherit, $color4, 2vw);
+        }
+
+        &--filterZA {
+            @include BeforeIcon("\f15e", inherit, $color4, 2vw);
+        }
+
+        &--filterStart {
+            @include BeforeIcon("\f160", inherit, $color4, 2vw);
+        }
+
+        &--filterClose {
+            @include BeforeIcon("\f161", inherit, $color4, 2vw);
+        }
+    }
+
+
+    &__input {
+        box-sizing: border-box;
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        border: 2px solid $color4;
+        margin-bottom: 2vh;
+        padding: 10px 5px;
+        border-radius: 5px;
+
+
+        &:focus::placeholder {
+            color: $cfont5;
+            opacity: 0.5;
+        }
+
+        &::placeholder {
+            font-family: "Fontello";
+        }
+
+    }
+
+
+    &__carousel {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    &__addFileAvatar {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 80px;
+        display: block;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        margin: 0 1vw 2vh 1vw;
+        border: 3px solid $color4;
+        position: relative;
+        scroll-snap-align: center;
+
+        &:hover {
+            border: 3px solid $color3;
+        }
+
+        @include BeforeIcon("\e825", 2em, $color4, inhrit);
+
+        &::before {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        &>input {
+            display: none;
+        }
+    }
+
+
+    &__uploadAvatar {
+        display: block;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        text-indent: -9999px;
+        z-index: 2;
+    }
+
+
+    &__defaultAvater {
+        display: block;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        margin: 0 1vw 2vh 1vw;
+        border: 3px solid $color4;
+        scroll-snap-align: center;
+
+
+        &:hover {
+            border: 3px solid $color3;
+        }
+    }
+
+
+    &__uploadFile {
+        box-sizing: border-box;
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        border: 2px solid $color4;
+        margin-bottom: 2vh;
+        padding: 10px 5px;
+        border-radius: 5px;
+        text-align: center;
+        color: $cfont7;
+        font-weight: bold;
+        font-family: "Fontello";
+
+        &>input {
+            display: none;
+        }
+    }
+}

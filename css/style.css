@@ -53,6 +53,20 @@ a {
   display: none;
 }
 
+input[type="date"] {
+  position: relative;
+  padding-left: 20px;
+  background: #FFFFFF;
+}
+
+input[type="date"]::before {
+  position: absolute;
+  font-family: "Fontello";
+  color: #999999;
+  content: attr(placeholder);
+  left: 5px;
+}
+
 .nav {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -298,6 +312,326 @@ a {
   }
 }
 
+.BoxDialog {
+  z-index: 999999;
+  bottom: 0;
+  top: unset;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.BoxDialog::-webkit-scrollbar {
+  display: none;
+}
+
+.BoxDialog__empty {
+  height: 100%;
+  scroll-snap-align: start;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+.BoxDialog__BoxFull {
+  overflow: hidden;
+  margin: 0 3px;
+  background: #FFFFFF;
+  padding: 0 0 10% 0;
+  border-radius: 10px 10px 0 0;
+  height: calc(100% - 3vh);
+  scroll-snap-align: start;
+}
+
+.BoxDialog__BoxMenu {
+  padding: 0 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2vh;
+}
+
+.BoxDialog__MenuPart {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.BoxDialog__MenuPart--center {
+  height: 3px;
+  border-radius: 5px;
+  background: #424242;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.BoxDialog__MenuClose {
+  margin-left: auto;
+}
+
+.BoxDialog__MenuClose::after {
+  font-family: Fontello;
+  content: "";
+  font-size: 1em;
+  color: #444444;
+  margin-left: 0;
+}
+
+.BoxDialog__BoxContent {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 2vw;
+  height: calc(100% - 3vh);
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+.BoxDial__title {
+  margin: 0;
+  padding: 0 5vw 10px 5vw;
+  color: #444444;
+}
+
+.BoxDial__ListButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 25px;
+  background: #FFFFFF;
+}
+
+.BoxDial__Button {
+  padding: 1.5vh 12vw;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+.BoxDial__Button--cancel {
+  background-color: #9E9E9E;
+}
+
+.BoxDial__Button--remove {
+  background-color: #9E9E9E;
+}
+
+.BoxDial__Button--accept {
+  background-color: #9C27B0;
+}
+
+.BoxDial__Option {
+  padding: 1.2vh 6vw;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: block;
+}
+
+.BoxDial__Option:hover::before {
+  opacity: 0.2;
+}
+
+.BoxDial__Option--filterAZ::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #9C27B0;
+  margin-right: 2vw;
+}
+
+.BoxDial__Option--filterZA::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #9C27B0;
+  margin-right: 2vw;
+}
+
+.BoxDial__Option--filterStart::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #9C27B0;
+  margin-right: 2vw;
+}
+
+.BoxDial__Option--filterClose::before {
+  font-family: Fontello;
+  content: "";
+  font-size: inherit;
+  color: #9C27B0;
+  margin-right: 2vw;
+}
+
+.BoxDial__input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid #9C27B0;
+  margin-bottom: 2vh;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+.BoxDial__input:focus::-webkit-input-placeholder {
+  color: #9C27B0;
+  opacity: 0.5;
+}
+
+.BoxDial__input:focus:-ms-input-placeholder {
+  color: #9C27B0;
+  opacity: 0.5;
+}
+
+.BoxDial__input:focus::-ms-input-placeholder {
+  color: #9C27B0;
+  opacity: 0.5;
+}
+
+.BoxDial__input:focus::placeholder {
+  color: #9C27B0;
+  opacity: 0.5;
+}
+
+.BoxDial__input::-webkit-input-placeholder {
+  font-family: "Fontello";
+}
+
+.BoxDial__input:-ms-input-placeholder {
+  font-family: "Fontello";
+}
+
+.BoxDial__input::-ms-input-placeholder {
+  font-family: "Fontello";
+}
+
+.BoxDial__input::placeholder {
+  font-family: "Fontello";
+}
+
+.BoxDial__carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+.BoxDial__addFileAvatar {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 80px;
+      flex-basis: 80px;
+  display: block;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: 0 1vw 2vh 1vw;
+  border: 3px solid #9C27B0;
+  position: relative;
+  scroll-snap-align: center;
+}
+
+.BoxDial__addFileAvatar:hover {
+  border: 3px solid #2196F3;
+}
+
+.BoxDial__addFileAvatar::before {
+  font-family: Fontello;
+  content: "";
+  font-size: 2em;
+  color: #9C27B0;
+  margin-right: inhrit;
+}
+
+.BoxDial__addFileAvatar::before {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.BoxDial__addFileAvatar > input {
+  display: none;
+}
+
+.BoxDial__uploadAvatar {
+  display: block;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  text-indent: -9999px;
+  z-index: 2;
+}
+
+.BoxDial__defaultAvater {
+  display: block;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: 0 1vw 2vh 1vw;
+  border: 3px solid #9C27B0;
+  scroll-snap-align: center;
+}
+
+.BoxDial__defaultAvater:hover {
+  border: 3px solid #2196F3;
+}
+
+.BoxDial__uploadFile {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid #9C27B0;
+  margin-bottom: 2vh;
+  padding: 10px 5px;
+  border-radius: 5px;
+  text-align: center;
+  color: #2196F3;
+  font-weight: bold;
+  font-family: "Fontello";
+}
+
+.BoxDial__uploadFile > input {
+  display: none;
+}
+
 .WarrantyList {
   position: absolute;
   top: 0;
@@ -442,7 +776,8 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-bottom: 10px;
+  -webkit-box-shadow: 0 4px 3px -4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 3px -4px rgba(0, 0, 0, 0.2);
 }
 
 .WarrantyList__FiltrBoxLabel {
@@ -781,7 +1116,9 @@ a {
 .User__header {
   background: #9C27B0;
   color: #ffffff;
+  display: block;
   height: 135px;
+  min-height: 135px;
   position: relative;
 }
 
@@ -824,15 +1161,15 @@ a {
 }
 
 .User__TopFirst {
-  margin-bottom: -30px;
-  font-size: 1.1em;
+  margin-bottom: -20px;
+  font-size: 1em;
   margin-right: auto;
 }
 
 .User__TopFirst::before {
   font-family: Fontello;
-  content: "";
-  font-size: inherit;
+  content: "";
+  font-size: 0.8em;
   color: #ffffff;
   margin-right: 5px;
 }
@@ -885,14 +1222,14 @@ a {
 
 .User__TopSecond {
   margin-bottom: -30px;
-  font-size: 1.1em;
+  font-size: 1em;
   margin-left: auto;
 }
 
 .User__TopSecond::after {
   font-family: Fontello;
-  content: "";
-  font-size: 0.8em;
+  content: "";
+  font-size: inherit;
   color: #ffffff;
   margin-left: 5px;
 }
@@ -930,7 +1267,7 @@ a {
 }
 
 .User__BoxTitile {
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding: 35px 0 10px 0;
   margin: 0;
   color: #444444;
@@ -955,7 +1292,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .User__BoxLink::before {
@@ -1021,15 +1358,7 @@ a {
   margin-right: 3px;
 }
 
-.User__BoxLink--SbuyAllegro::before {
-  font-family: Fontello;
-  content: "";
-  font-size: inherit;
-  color: #444444;
-  margin-right: 3px;
-}
-
-.User__BoxLink--Senter::before {
+.User__BoxLink--Sproblem::before {
   font-family: Fontello;
   content: "";
   font-size: inherit;
@@ -1170,10 +1499,10 @@ a {
   width: 120px;
   margin-bottom: -60px;
   padding: 3px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9C27B0), color-stop(50%, #9C27B0), color-stop(0%, #FFFFFF), to(#FFFFFF));
-  background: linear-gradient(360deg, #9C27B0 0%, #9C27B0 50%, #FFFFFF 0%, #FFFFFF 100%);
-  -webkit-box-shadow: 0px 0px 9px black;
-          box-shadow: 0px 0px 9px black;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9C27B0), color-stop(100%, #9C27B0), color-stop(0%, #FFFFFF), to(#FFFFFF));
+  background: linear-gradient(360deg, #9C27B0 0%, #9C27B0 100%, #FFFFFF 0%, #FFFFFF 100%);
+  -webkit-box-shadow: 0px 0px 9px 2px black;
+          box-shadow: 0px 0px 9px 2px black;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1404,7 +1733,7 @@ a {
 }
 
 .Product__BoxTitile {
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding: 35px 0 10px 0;
   margin: 0;
 }
@@ -1418,13 +1747,29 @@ a {
 }
 
 .Product__BoxEditButton--save {
-  color: #9C27B0;
+  color: #2196F3;
   opacity: 1;
   font-weight: bold;
 }
 
 .Product__BoxKat {
   padding: 0 0 1.5vh 2vw;
+}
+
+.Product__BoxKat--Item .Product__BoxKatName::before {
+  font-family: Fontello;
+  content: "";
+  font-size: 1em;
+  color: #000000;
+  margin-right: 5px;
+}
+
+.Product__BoxKat--Name .Product__BoxKatName::before {
+  font-family: Fontello;
+  content: "";
+  font-size: 1em;
+  color: #000000;
+  margin-right: 5px;
 }
 
 .Product__BoxKat--StartDate .Product__BoxKatName::before {
@@ -1497,7 +1842,7 @@ a {
 
 .Product__BoxKatName {
   font-weight: 200;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin: 0;
   padding: 1vh 0 3px 0;
 }
